@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins','Roboto';
+}
+header{
+    display: flex;
+    background:#f2f3fa;
+    position: relative;
+    width: 100%;
+}
+.header-nav{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 500;
+    width: 100%;
+    padding:1.5rem 0;
+    align-items: baseline;
+}
+.header-nav ul{
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: space-between !important;
+    list-style: none;
+    width: 50%;
+}
+.header-nav .list-items{
+    position: relative;
+    cursor: pointer;
+}
+.header-nav .list-items::after{
+    content:'';
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 30px;
+    background:transparent;
+}
+.header-nav ul li .list-items-name{
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-right: 5px;
+    color: rgb(23,19,71);
+    transition: all .3s;
+}
+.header-nav ul li i{
+    font-size: 12px ;
+    transition: 0.3s;
+}
+.hide-items{
+    flex-direction: column;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    width: 170px !important;
+    top: calc(100% + 30px);
+    box-shadow: 0px 26px 21px 0px rgba(0, 0, 0, 0.1);
+    padding: 10px 0 !important;
+    border-top: 3px solid #008aff;
+    animation: hideIn1 .5s forwards;
+    display: none !important;
+    z-index: 2;
+    background: #fff;
+}
+.hide-items-dropdown{
+    padding: 10px 0 10px 15px;
+    color: rgb(113,128,150);
+    text-transform: capitalize;
+    font-size: 14px;
+}
+.hide-items-dropdown-name-text{
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-right: 5px;
+    color: rgb(23,19,71);
+    transition: all .3s;
+}
+.header-nav ul .list-items:hover .list-items-name, .header-nav ul .list-items:hover i{
+    color:#008aff;
+}
+.header-nav ul .list-items:hover .hide-items{
+    display: block !important;
+}
+.hide-items-dropdown:hover{
+    color: #008aff;;
+}
+.nav-button{
+    margin-left: 2rem;
+    border:none;
+    background: rgb(255,190,61);
+    border:2px solid rgb(255,190,61);
+    border-radius: 8px;
+    padding:3px 12px;
+    color:#fff;
+    font-weight: 450;
+    transition: 0.5s ease-out;
+}
+.nav-button:hover{
+    background:#fff;
+    color:rgb(255,190,61);
+}

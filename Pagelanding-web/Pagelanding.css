@@ -14,17 +14,22 @@ header{
 }
 .header-nav{
     display: flex;
-    justify-content: flex-end;
-    font-weight: 500;
+    justify-content: space-around;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #fff;
+    padding: 18px 20px;
+    transition: all .5s;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 24px 0px;
     width: 100%;
-    padding:1.5rem 0;
-    align-items: baseline;
+    z-index: 2;
 }
 .header-nav ul{
     margin:0;
     padding:0;
     display: flex;
-    justify-content: space-between !important;
+    justify-content: space-around !important;
     list-style: none;
     width: 50%;
 }
@@ -304,4 +309,86 @@ header{
 }
 .main-introduce-image img{
     width: 100%;
+}
+.main-product{
+    padding-top: 3.75rem;
+    background:#f2f3fa;
+}
+.main-product-meaning{
+    text-align: center;
+    width: 50%;
+    margin:0 auto;
+}
+.main-product-title{
+    font-size:2.5rem;
+    color:rgb(23,19,71);
+    font-weight: 500;
+    position: relative;
+    text-transform: capitalize;
+    padding-bottom: 1.5rem;
+}
+.main-product-title::after{
+    content:'';
+    position: absolute;
+    width: 5%;
+    display: block;
+    height: 2px;
+    background:#008aff;
+    top:100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main-product-content{
+    color:rgb(113,128,150);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 1.5rem 0 2rem 0;
+}
+.main-product-item{
+    position: relative;
+}
+.member{
+    width: 100%;
+    cursor: pointer;
+    height: 30vw;
+    object-fit: cover;
+}
+.main-product-item-hide{
+    z-index: 5;
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    color:#fff;
+    padding:20px 0 0 20px;
+    transition: all 0.5s;
+    opacity: 0;
+    width: 50%;
+}
+.main-product-item-hide-title{
+    font-weight: 600;
+    padding:5px 0;
+}
+.main-product-item-hide-content{
+    color:rgb(113,128,150);
+}
+.link-more-infor{
+    display: inline-block;
+    text-decoration: none;
+    color:#fff !important;
+    font-weight: 700;
+    border-bottom: 2px solid #fff;
+}
+.link-more-infor:hover{
+    text-decoration: none;
+}
+.main-product-item:hover .main-product-item-hide{
+    opacity: 1;
+    left:0;
+    right:auto;
+    width: 100%;
+}
+.link-more-infor:hover{
+    animation: hideIn2 0.5s forwards;
 }

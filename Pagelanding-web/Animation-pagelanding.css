@@ -5,6 +5,14 @@
     }
     to{
         opacity: 1;
-        transform: translateY(-7px);
+        transform: translateY(-12px);
+    }
+}
+@keyframes hideIn2{
+    from{
+        width: 35px;
+    }
+    to{
+        width: 0;
     }
 }

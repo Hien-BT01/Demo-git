@@ -14,22 +14,17 @@ header{
 }
 .header-nav{
     display: flex;
-    justify-content: space-around;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background: #fff;
-    padding: 18px 20px;
-    transition: all .5s;
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 24px 0px;
+    justify-content: flex-end;
+    font-weight: 500;
     width: 100%;
-    z-index: 2;
+    padding:1.5rem 0;
+    align-items: baseline;
 }
 .header-nav ul{
     margin:0;
     padding:0;
     display: flex;
-    justify-content: space-around !important;
+    justify-content: space-between !important;
     list-style: none;
     width: 50%;
 }
@@ -378,6 +373,7 @@ header{
     text-decoration: none;
     color:#fff !important;
     font-weight: 700;
+
     border-bottom: 2px solid #fff;
 }
 .link-more-infor:hover{

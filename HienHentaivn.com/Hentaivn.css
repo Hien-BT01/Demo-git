@@ -1,0 +1,421 @@
+body{
+    background-color: #161616;
+    font-family: 'Noto Sans',sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header{
+    margin-top: 10px;   
+    width: 100%;
+}  
+.logo{
+    padding: 20px;
+    display: block;
+}
+.image{
+    height: 100px;
+    width: 350px;
+    object-fit:cover;
+}
+a{
+    color: #44b9fa;
+    text-decoration: none;
+}
+.result{
+    float: right;
+    background: #44b9fa;
+    border: 1px solid #8d9ac7;
+    width: 40px;
+    cursor: pointer;
+    height: 32px;
+}
+.search{
+    border-radius: 2px;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    left: right;
+    line-height: 34px;
+    position: relative;
+    margin-right: 10px;
+    float: right;
+}
+.type-search{
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    background: #fff;
+    border: 1px solid #8d9ac7;
+    padding: 3px 4px 4px 4px;
+    font-family: Tahoma;
+    height: 32px;
+    margin: 0 4px;
+    float: right;
+}
+.search-hentai{
+    background: #fff;
+    border: 1px solid #8d9ac7;
+    padding: 3px 4px 4px 4px;
+    font-family: Tahoma;
+    float: right;
+    border-radius: 2px;
+    width: 210px;
+    height: 32px;
+}
+.advanced-finding{
+    margin:10px 6px 0 0;
+    width: 200px;
+    float: right;
+    padding: 0;
+    font-size: 14px;
+}
+.advanced-finding a{
+    color: #44b9fa;
+    background-color:transparent ;
+}
+.advanced-finding a:hover{
+    text-decoration: none;
+    color: #f0f0f0;
+}
+.nav-login{
+    height: 28px;
+    background: #383636;
+    width: 100%;
+}
+.nav-bar{
+    text-align: center;
+    background-color: #fff;
+    width: 100%;
+}
+.nav-bar ul{
+    font: bold 12px/27px Arial,Helvetica,sans-serif;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.nav-bar ul li{
+    padding: 3px 15px;
+    border-right: 1px solid black;
+    position: relative;
+    z-index: 2;
+}
+.nav-bar ul li a{
+    margin-right: 1px;
+    min-width: 6rem;
+    display: block;
+    color: #444;
+}
+.nav-bar ul li a:hover{
+    text-decoration: none;
+    color: dodgerblue;
+    transition-duration: 0.3s ;
+    transition-timing-function: ease-out;
+}
+.nav-bar ul li > .list-options{
+    margin-top: 3px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    display: none;
+    right: 0;
+    position: absolute;
+}
+.nav-bar ul li > .list-options > li{
+    border-right: none;
+}
+.nav-bar ul li .list-options li a{
+    color: #444;
+    display: block;
+    font: bold 12px/27px Arial,Helvetica,sans-serif;
+}
+.list-options li:first-child{
+    border-top:1px solid black;
+}
+.nav-bar ul li .list-options li:hover a{
+    color:#44b9fa;
+    background-color: #444;
+}
+.nav-bar ul li:hover .list-options{
+    display: block;
+}
+.nav-bar ul li:hover li{
+    border-bottom: 1px solid black;
+}
+#main{
+    margin-top: 20px;
+    position: relative;
+    height: 100%;
+}
+#top-hentai{
+    width: 100%;
+    padding: 2px;
+    border: 1px solid #666;
+    background: black;
+}
+#top-hentai-title{
+    color: #fff;
+    font: bold 15px Helvetica;
+    padding: 5px 15px;
+    background: #e84c3d;
+}
+#top-hentai ul{ 
+    display: flex;
+    margin: 0;
+    position: relative;
+    list-style: none;
+    padding: 7px 0 7px 7px;
+}
+#top-hentai ul li{
+    width: 14.28571%;
+}
+#top-hentai ul li a{
+    padding: 2px 2px 20px 2px;
+    color: #44b9fa;
+    text-decoration: none;
+    display: block;
+    margin-right: 7px;
+    border: 1px solid #666;
+    background: #2b2b2b;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #666;
+}
+#top-hentai ul li a img{
+    height: 14rem;
+    padding: 4px;
+    max-width: 100%;
+}
+.description{
+    margin: 0;
+    display: block;
+    padding:1px 5px 5px;
+    height: 2rem;
+    text-align: center;
+    font-family: 'Noto Sans',sans-serif;
+}
+#top-hentai ul li a:hover{
+    color: #fff;
+}
+.sign-up-sign-in{
+    text-align: center;
+    width: 55%;
+    border-radius: 5px;
+    background:#f1efef;
+    margin:2rem auto;
+    font-weight: bold;
+    font-size: 16px;
+}
+.sign-up-sign-in p{
+    margin: 0;
+    width: 100%;
+}
+.sign-up-sign-in a{
+    display: inline-block;
+}
+.sign-up-sign-in code{
+    color: black;
+    font-weight: 800;
+}
+.sign-up-sign-in a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+.other-hentai-ep{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 2px;
+    border: 1px solid #666;
+    background: black;
+}
+.selection-bar{
+    padding:5px 15px;
+    background:#27ae60;
+    color: #fff;
+    font: bold 15px Helvetica;
+}
+.selection-bar a{
+    position: relative;
+    top: 1px;
+    padding-top: 10px;
+    color: #c4eaff;
+    font-size: 1rem;
+}
+.selection-bar a:hover{
+    text-decoration: none;
+    color: #c4eaff;;
+}
+.page{
+    position: relative;
+    bottom: 5px;
+    float:right;
+    color: #f1efef;
+}
+.page p{
+    display: inline-block;
+    padding: 0;
+    position: relative;
+    top: -6px;
+}
+.page .expand:hover{
+    display: inline-block;
+    transform:scale(1.5);
+    color: #dd6b1f;
+}
+#more-hentai-options{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2px;
+    background: black;
+}
+#more-hentai-options ul{
+    width: 100%;
+    display: flex;
+    margin: 0;
+    position: relative;
+    list-style: none;
+    padding: 7px 0 7px 7px;
+}
+#more-hentai-options ul li {
+    width: 20%;
+}
+#more-hentai-options ul li a {
+    padding: 2px 2px 20px 2px;
+    color: #44b9fa;
+    text-decoration: none;
+    display: block;
+    margin-right: 10px;
+    border: 1px solid #666;
+    background: #2b2b2b;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #666;
+}
+#more-hentai-options ul a img{
+    height: 17rem;
+    padding: 4px;
+    width: 100%;
+}
+#more-hentai-options ul li a:hover{
+    text-decoration: none;
+    color:#f1efef;
+}
+#distance{
+    min-height: 20rem;
+    width: 100%;
+}
+#items{
+    overflow: hidden;
+    width: 100%;
+}
+#left-sidebar{
+    float: left;
+    border:1px solid #666;
+    width: 75%;
+    padding:2px;
+    background:black;
+}
+#left-sidebar-title{
+    color: #fff;
+    font: bold 15px Helvetica;
+    padding: 5px 15px;
+    background:#103e4b;
+}
+#items ul{
+    margin:0;
+    position: relative;
+    padding:7px 0 7px 15px;
+    list-style: none;
+}
+#items ul li{
+    width: 100%;
+    background: #2b2b2b;
+    margin-bottom: 1rem;
+}
+#items .link-image{
+    display: inline-block;
+    padding: 8px;
+    margin: 0;
+}
+#items ul li a img{
+    background-size: cover;
+    height: 6.5rem;
+    padding:2px;
+    border: 0.5px solid #444;
+    object-fit: cover;
+}
+#items .title-link{
+    display: inline-block;
+    position: relative;
+    top: -1rem;
+}
+#items ul > li a:hover{
+    text-decoration: none;
+    color:#f1efef;
+}
+.status{
+    color: #f1efef;
+    font-weight: bold;
+}
+#right-side-bar{
+    background:black;
+    border: 1px solid #666;
+    width: 20%;
+    float: right;
+    padding: 2px;
+    margin-right: 2rem;
+}
+#right-side-bar-title{
+    background:#16a085;
+}
+#viewbox{
+    background:#16a085;
+    font: bold 14px Helvetica;
+    padding: 5px 15px;
+    font-family: Tahoma;
+    color: #fff;
+    width: 100%;
+    border: none;
+}
+#right-side-bar ul{
+    margin:0;
+    padding: 7px;
+    position:relative;
+}
+#right-side-bar ul li{
+    color:#fff;
+    overflow: hidden;
+    padding: 7px 2px 4px;
+    border-bottom: 1px solid #666;
+    margin-bottom:0.8px;
+    position: relative;
+    background:black;
+}
+.view-top{
+    line-height: 1.5rem;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 700;
+}
+.rank{
+    float: left;
+    width: 1.375rem;
+    height: 1.375rem;
+    border-radius: 50%;
+    margin-right: 5px;
+    line-height: 1.375rem;
+    text-align: center;
+    font-size: 12px;
+    color:black;
+}
+#right-side-bar ul li a {
+    font-size: 0.9rem;
+    color: #f1efef;
+}
+.view-quantity{
+    float: right;
+    color: white;
+    font-size: 0.7rem   ;
+}

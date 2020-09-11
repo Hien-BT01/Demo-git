@@ -876,15 +876,16 @@ footer{
     position: absolute;
     display:block;
     bottom: 0;
-    right: 0;
     width: 0;
+    right:0;
+    left:auto;
     height: 1px;
     background:#fff;
     transition: all .5s;
 }
 .footer-conclusion-item:hover:after{
     width:100%;
-    left: 0;
+    right:0;
 }
 .form{
     display: flex;

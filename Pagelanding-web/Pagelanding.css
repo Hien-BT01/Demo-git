@@ -487,9 +487,11 @@ header{
     object-fit: cover;
 }
 .statistic-happiness{
+    background-image: linear-gradient(to right,#49c5b6 0%,#5766d3 100%);
     padding:6rem 2rem;
 }
 .main-statistic-item{
+    background:#fff;
     display: flex;
     flex-direction: column;
     justify-content: center;

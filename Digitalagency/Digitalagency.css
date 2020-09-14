@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Roboto";
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(http://demo.themelogi.com/navian/wp-content/uploads/2019/06/groups.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+}
+.header-navbar {
+  position: relative;
+  padding: 15px 30px;
+  color: #fff;
+  z-index: 2;
+  transition: all 0.5s;
+}
+.header-navbar-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-navbar-side div .header-navbar-logo {
+  vertical-align: middle;
+}
+.header-navbar-side-lists {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header-navbar-side-lists .header-navbar-side-item {
+  cursor: pointer;
+  margin: 0 15px;
+}
+.header-navbar-side-lists .header-navbar-side-item-text {
+  position: relative;
+  font-size: 1rem;
+}
+.header-navbar-side-lists .header-navbar-side-item-text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  width: 0;
+  top: calc(100% + 10px);
+  height: 5px;
+  transition: all 0.5s;
+}
+.header-navbar-side-lists .header-navbar-side-item-text::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 50%;
+  width: 0;
+  top: calc(100% + 10px);
+  height: 5px;
+  transition: all 0.5s;
+}
+.header-navbar-side-lists .header-navbar-side-item i {
+  font-size: 10px;
+  margin-left: 10px;
+}
+.header-navbar-side-lists .header-navbar-side-item:hover span:before, .header-navbar-side-lists .header-navbar-side-item:hover span:after {
+  width: 50%;
+  background: #49c5b6;
+}
+.header-navbar-side-lists .header-navbar-side-item-dropdown {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: -40%;
+  width: 65.25rem;
+  z-index: 3;
+  color: #fff;
+  transform-origin: top;
+  transition: all 0.5s;
+  transform: scaleY(0);
+  opacity: 0;
+}
+.header-navbar-side-lists .header-navbar-side-item-dropdown .wrap-img {
+  height: 100%;
+}
+.header-navbar-side-lists .header-navbar-side-item-dropdown .wrap-img .dropdown-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header-navbar-side-lists .header-navbar-side-item-dropdown-items {
+  background: #1b1a1a;
+  padding: 27px 40px 20px;
+}
+.header-navbar-side-lists .header-navbar-side-item-dropdown-items-title {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 1px solid #585757;
+  padding-bottom: 15px;
+  margin-bottom: 16px;
+}
+.header-navbar-side-lists .header-navbar-side-item-dropdown-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header-navbar-side-lists .header-navbar-side-item-dropdown-items-list-item {
+  font-size: 14px;
+  padding: 10px 0;
+  padding-left: 15px;
+  transition: all 0.3s;
+}
+.header-navbar-side-lists .header-navbar-side-item-dropdown-items-list-item span {
+  display: inline-block;
+  padding: 2px 7px;
+  font-size: 12px;
+  border-radius: 12px;
+  margin-left: 7px;
+}
+.header-navbar-side-lists .header-navbar-side-item:hover .header-navbar-side-item-dropdown {
+  transform: scaleY(1);
+  opacity: 1;
+  display: block;
+}
+.header-navbar-side-button {
+  padding: 10px 25px;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right, #49c5b6 0%, #5766d3 100%);
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+.header-navbar-side-button:hover {
+  transform: translateY(5px);
+}
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.54;
+}
+
+/*# sourceMappingURL=Digitalagency.css.map */

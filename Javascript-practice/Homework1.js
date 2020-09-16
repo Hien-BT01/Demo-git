@@ -1,4 +1,4 @@
-// check one number is equal to 100 or sum of two number is 100
+/*// check one number is equal to 100 or sum of two number is 100
 var equal = function isEqualTo(a,b){
     if(a === 100 || b === 100 ||  a + b === 100){
         return true;
@@ -28,4 +28,4 @@ const  formateDate = (date = new Date()) => {
     const time = date.getTime()
     return ` ${days}/${Months}/${years} \n ${time}`
 }
-console.log(formateDate())
+console.log(formateDate())*/

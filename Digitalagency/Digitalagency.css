@@ -1292,4 +1292,37 @@
   color: #5766d3;
 }
 
+.product__logo {
+  padding-bottom: 50px;
+  background: #f7f7f7;
+}
+.product__logo .owl-stage {
+  width: 4200px;
+}
+.product__logo .owl-stage .owl-item img {
+  min-width: 16.875rem;
+  object-fit: contain;
+  height: 4rem;
+}
+.product__logo .owl-next {
+  width: 30px;
+  right: -5%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.product__logo .owl-prev {
+  width: 30px;
+  left: -5%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.product__logo .owl-prev span {
+  font-size: 30px;
+}
+.product__logo .owl-next span {
+  font-size: 30px;
+}
+
 /*# sourceMappingURL=Digitalagency.css.map */

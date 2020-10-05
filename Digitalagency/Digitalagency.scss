@@ -688,3 +688,36 @@ $light-red:#FA4E40;
         }
     }
 }
+.product__logo{
+    padding-bottom: 50px;
+    background:#f7f7f7;
+    .owl-stage{
+        width: 4200px;
+        .owl-item img{
+            min-width: 16.875rem;
+            object-fit: contain;
+            height: 4rem;
+        }
+    }
+    .owl-next{
+        width: 30px;
+        right:-5%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .owl-prev{
+        width: 30px;
+        left:-5%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .owl-prev span{
+        font-size: 30px;
+    }
+    .owl-next span{
+        font-size: 30px;
+    }
+    
+}

@@ -1,3 +1,13 @@
+
+
+.header_navbar_fix{
+    position: fixed !important;
+    top: 0 !important;
+    width:100% !important;
+    background:#fff !important;
+    color:black !important;
+    z-index:9 !important;
+}
 @keyframes hideIn3{
     0%{
         left:-100%;

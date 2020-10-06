@@ -1,0 +1,108 @@
+
+
+.header_navbar_fix{
+    position: fixed !important;
+    top: 0 !important;
+    width:100% !important;
+    background:#fff !important;
+    color:black !important;
+    z-index:9 !important;
+}
+@keyframes hideIn3{
+    0%{
+        left:-100%;
+    }
+    50%{
+        left:100%;
+    }
+    100%{
+        left:100%;
+    }
+}
+@keyframes hideIn4{
+    0%{
+        top:-100%;
+    }
+    50%{
+        top:100%;
+    }
+    100%{
+        top:100%
+    }
+}
+@keyframes hideIn5{
+    0%{
+        right:-100%;
+    }
+    50%{
+        right:100%;
+    }
+    100%{
+        right:100%;
+    }
+}
+@keyframes hideIn6{
+    0%{
+        bottom:-100%;
+    }
+    50%{
+        bottom:100%;
+    }
+    100%{
+        bottom: 100%;
+    }
+}
+@keyframes change_color{
+    0%{
+        background-image: linear-gradient(to right bottom, #876ae8, #aa4fb4, #ae3d83, #a1385a, #89393c);
+    }
+    25%{
+        background-image: linear-gradient(to right bottom, #468b92, #4287af, #7b79b8, #b5639b, #cd5960);
+    }
+    50%{
+        background-image: linear-gradient(to right bottom, #ca8454, #d79276, #dea395, #e1b5b2, #e0c9ca);
+    }
+    100%{
+        background-image: linear-gradient(to right bottom, #adb874, #baa352, #ca8a3c, #da6b3a, #e3444a);
+    }
+}
+@keyframes turnLeft{
+    from{
+        transform: translateX(100px);
+    }
+    to{
+        transform:translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes Righttoleft{
+    from{
+        left:100%;
+    }
+    to{
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        opacity: 1;
+    }
+}
+@keyframes Toptobottom{
+    from{
+        transform: translateY(-2.5rem);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes Bottomtotop{
+    from{
+        transform: translateY(2.5rem);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*# sourceMappingURL=Animation.css.map */

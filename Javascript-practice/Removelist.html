@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            padding:12px 24px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="removeList()" style="display: block;margin-bottom: 1rem;margin-top: 1rem;">Remove Item</button>
+    <ul>
+        <li id="demo">Powerpoint</li>
+        <li>Word</li>
+        <li>Excel</li>
+    </ul>
+    <input type="text" id="input-text" placeholder="Thêm sản phẩm vào">
+    <script>
+        var parentElement = document.getElementsByTagName("UL")[0];
+        var childElement = document.getElementsByTagName("li");
+        // Cách 1
+        
+        /*function removeList(){
+            childElement[childElement.length - 1].remove();
+        }*/
+
+        // Cách 2
+        function removeList(){
+            /*if(parentElement.hasChildNodes()){
+                parentElement.removeChild(parentElement.lastChild);
+            }*/
+            // xóa phần tử với giá trị đã nhập
+            for(var i = 0 ; i < parentElement.childElementCount ; i++){
+                if(childElement[i].innerText === document.getElementById('input-text').value){
+                    childElement[i].remove();
+                }
+            }
+        }
+    </script>   
+</body>
+</html>

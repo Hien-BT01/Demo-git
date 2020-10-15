@@ -320,4 +320,54 @@ $light-red:#FA4E40;
         }
     }
 }
+@mixin owl_button (){
+    .owl-next{
+        width: 30px;
+        right:-5%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .owl-prev{
+        width: 30px;
+        left:-5%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .owl-prev span{
+        font-size: 30px;
+        color:$color_item;
+    }
+    .owl-next span{
+        font-size: 30px;
+        color:$color_item;
+    }
+}
+@mixin z_index (){
+    z-index: 3;
+}
+@mixin flex_items (){
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+@mixin contact_heading() {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-bottom: 2rem;
+    font-weight: 700;
+    display: inline-block;
+    border-bottom: 2px solid $text_color_white;
+    letter-spacing: 2px;
+}
+@mixin contact_title {
+    position: relative;
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    word-spacing: 3px;
+    text-transform: capitalize;
+}
 

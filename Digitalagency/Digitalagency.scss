@@ -999,19 +999,18 @@ $light-red:#FA4E40;
                     justify-content: space-between;
                     cursor: pointer;
                     align-items: center;
-                    .angle-up{
-                        font-weight: 900;
-                    }
                     &::after{
                         content: '\25be';
-                        float: right;
+                        position: absolute;
+                        right:1rem;
                         transform: scale(1.5);
+                        transition: transform 0.5s ease-in-out;
                     }
                     &__active{
                         background:$color_item !important;
                         color:#fff !important;
                         &::after{
-                            content: '\25b4' !important;
+                            transform: rotate(-180deg) scale(1.5);
                         }
                     }
                 }
@@ -1039,5 +1038,70 @@ $light-red:#FA4E40;
         bottom: 0;
         background-image: linear-gradient(to right,#49c5b6 0%,#5766d3 100%);
         opacity: 0.95;
+    }
+}
+.footer{
+    background:#222222;
+    padding:3.5rem 6rem;
+    &__left{
+        img{
+            vertical-align: middle;
+        }
+        &-list{
+            font-size: 12px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        &-item{
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            &:after{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 110%;
+                display: block;
+                height: 2px;
+                width: 100%;
+                transition: all 0.3s ease-in-out;
+                background: #616161;
+                opacity: 0;
+            }
+            &:hover::after{
+                opacity: 1;
+                transform: translateY(-4px);
+            }
+        }
+    }
+    &__right{
+        color: #afafaf;
+        &-icons{
+            color:#fff;
+        }
+        &__specific-symbol{
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            line-height: 3.3rem;
+            text-align: center;
+            background: #616161;
+            display: inline-block;
+            cursor: pointer;
+            transition: all .5s;
+            i{
+                font-size: 1.5rem;
+            }
+            &:hover{
+                box-shadow: 0 0 11px 0 #4e64b5;
+                transform: translateY(-5px);
+            }
+        }
+        &__license{
+            span{
+                color:$color_item
+            }
+        }
     }
 }

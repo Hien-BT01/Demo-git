@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-items {
+  position: relative;
+  padding: 0 3rem;
+  background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+  max-height: 25vh;
+}
+.nav-items .logo {
+  padding: 1.5rem 0;
+  position: relative;
+  width: 10%;
+}
+.nav-items .logo-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nav-items__menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.nav-items__menu__item {
+  line-height: 2rem;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.5s;
+  color: rgba(0, 0, 0, 0.5);
+}
+.nav-items__menu__item:hover {
+  text-decoration: none;
+  color: #da2c46;
+}
+.nav-items__button {
+  position: relative;
+  display: block;
+  padding: 12px 2.5rem;
+  border: none;
+  outline: none;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-top-left-radius: 30px;
+  overflow: hidden;
+  z-index: 2;
+}
+.nav-items__button::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  background: #202e45;
+  transition: all 0.5s linear;
+  transform: translateX(-20%);
+  opacity: 0;
+  z-index: -1;
+}
+.nav-items__button:hover::before {
+  opacity: 1;
+  transform: none;
+}
+
+.banner__section {
+  text-align: center;
+  padding: 7rem 6rem;
+  font-family: "Poppins", "Roboto", "sans-serif";
+  background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+}
+.banner__section-title {
+  font-size: 3.875rem;
+  font-weight: 700;
+  color: #fff;
+}
+.banner__section-title span {
+  color: #da2c46;
+}
+@media screen and (max-width: 482px) {
+  .banner__section {
+    padding: 3rem 2rem;
+  }
+  .banner__section-title {
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+.menu-demo {
+  padding: 6rem 5rem;
+  text-align: center;
+  position: relative;
+  background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+  text-transform: capitalize;
+}
+.menu-demo__title {
+  position: relative;
+  color: #454545;
+}
+.menu-demo__heading {
+  font-family: "Krona One", sans-serif;
+  color: #454545;
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+}
+.menu-demo__heading span {
+  color: #da2c46;
+}
+.menu-demo__content {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=Fionca.css.map */

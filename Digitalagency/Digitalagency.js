@@ -1,181 +1,122 @@
-var element = document.querySelectorAll(".statistic-item-content-number");
-var speed = 10;
+var element = document.querySelectorAll(".statistic-item-content-number"),
+  speed = 10;
 $(window).scroll(function () {
-  if ($(this).scrollTop() > 2850) {
-    element.forEach((Item) => {
-      var currentValue = 0;
-      var ConterUp = function () {
-        var number = parseFloat(Item.getAttribute("data-number"));
-        var unit = Item.getAttribute("data-unit");
-        var value = number / speed;
-        currentValue += value;
-        if (currentValue < number) {
-          Item.innerHTML = parseInt(currentValue) + unit;
-          setTimeout(ConterUp, 80);
-        } else {
-          Item.innerHTML = number + unit;
-        }
-      };
-      ConterUp();
-    });
-    $(this).unbind();
-  }
-});
-
-$(window).scroll(function () {
-  if ($(this).scrollTop() > 50) {
-    $(".header-navbar-side-button").fadeIn();
-    $(".header-navbar").addClass("header_navbar_fix");
-    $(".header-nav-logo img").attr(
-      "src",
-      "http://demo.themelogi.com/navian/wp-content/themes/navian/assets/img/logo-dark.png"
+    $(this).scrollTop() > 2850 &&
+      (element.forEach((e) => {
+          var t = 0,
+            a = function () {
+              var o = parseFloat(e.getAttribute("data-number")),
+                l = e.getAttribute("data-unit");
+              (t += o / speed) < o
+                ?
+                ((e.innerHTML = parseInt(t) + l), setTimeout(a, 80)) :
+                (e.innerHTML = o + l);
+            };
+          a();
+        }),
+        $(this).unbind());
+  }),
+  $(window).scroll(function () {
+    $(this).scrollTop() > 50 ?
+      ($(".header-navbar-side-button").fadeIn(),
+        $(".header-navbar").addClass("header_navbar_fix"),
+        $(".header-nav-logo img").attr(
+          "src",
+          "http://demo.themelogi.com/navian/wp-content/themes/navian/assets/img/logo-dark.png"
+        )) :
+      ($(".header-navbar").removeClass("header_navbar_fix"),
+        $(".header-nav-logo img").attr(
+          "src",
+          "http://demo.themelogi.com/navian/wp-content/themes/navian/assets/img/logo-light.png"
+        ));
+  }),
+  $(".header-navbar-side-button").click(function () {
+    $("html").animate({
+        scrollTop: 0,
+      },
+      500
     );
-  } else {
-    $(".header-navbar").removeClass("header_navbar_fix");
-    $(".header-nav-logo img").attr(
-      "src",
-      "http://demo.themelogi.com/navian/wp-content/themes/navian/assets/img/logo-light.png"
-    );
-  }
-});
-$(".header-navbar-side-button").click(function () {
-  $("html").animate({
-      scrollTop: 0,
+  }),
+  $(".owl-carousel0").owlCarousel({
+    loop: !0,
+    autoplay: !0,
+    autoplayHoverPause: !0,
+    autoplayTimeout: 2e3,
+    margin: 10,
+    nav: !0,
+    dots: !0,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 3,
+      },
+      1e3: {
+        items: 4,
+      },
     },
-    500
-  );
-});
-
-$(".owl-carousel0").owlCarousel({
-  loop: true,
-  autoplay: true,
-  autoplayHoverPause: true,
-  autoplayTimeout: 2000,
-  margin: 10,
-  nav: true,
-  dots: true,
-  responsive: {
-    0: {
-      items: 1,
+  }),
+  $(".owl-carousel1").owlCarousel({
+    loop: !0,
+    autoplay: !0,
+    autoplayHoverPause: !0,
+    autoplayTimeout: 2e3,
+    margin: 10,
+    nav: !0,
+    dots: !0,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 1,
+      },
+      1e3: {
+        items: 3,
+      },
     },
-    600: {
-      items: 3,
-    },
-    1000: {
-      items: 4,
-    },
-  },
-});
-$(".owl-carousel1").owlCarousel({
-  loop: true,
-  autoplay: true,
-  autoplayHoverPause: true,
-  autoplayTimeout: 2000,
-  margin: 10,
-  nav: true,
-  dots: true,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 1,
-    },
-    1000: {
-      items: 3,
-    },
-  },
-});
+  });
 var owl = $(".owl-carousel");
 owl.owlCarousel({
-  loop: true,
-  nav: true,
-  margin: 10,
-  responsive: {
-    0: {
-      items: 1,
+    loop: !0,
+    nav: !0,
+    margin: 10,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 3,
+      },
+      960: {
+        items: 5,
+      },
+      1200: {
+        items: 6,
+      },
     },
-    600: {
-      items: 3,
-    },
-    960: {
-      items: 5,
-    },
-    1200: {
-      items: 6,
-    },
-  },
-});
-owl.on("mousewheel", ".owl-stage", function (e) {
-  if (e.deltaY > 0) {
-    owl.trigger("next.owl");
-  } else {
-    owl.trigger("prev.owl");
-  }
-  e.preventDefault();
-});
-// Collapes cách 1
-// var collapesDiv = document.querySelectorAll('.question-answer__detail__collapse__list');
-//     function collapseItems(event,index){
-//         for(let j = 0; j < collapesDiv.length ; j++){
-//             collapesDiv[j].nextElementSibling.style.display = 'none';
-//             collapesDiv[j].style.background = 'transparent';
-//             collapesDiv[j].innerHTML = '+'
-//         }
-//         collapesDiv[index].style.background = 'red';
-//         collapesDiv[index].nextElementSibling.style.display = 'block'
-//         collapesDiv[index].innerHTML = '-'
-//     }
-//     for (let i = 0 ; i < collapesDiv.length ; i++){
-//         collapesDiv[i].addEventListener('click',(event)=>{
-//             collapseItems(event,i);
-//         })
-// }
-
+  }),
+  owl.on("mousewheel", ".owl-stage", function (e) {
+    e.deltaY > 0 ? owl.trigger("next.owl") : owl.trigger("prev.owl"),
+      e.preventDefault();
+  });
 const collapesHeader = document.querySelectorAll(
   ".question-answer__detail__collapse__list"
 );
-collapesHeader.forEach((collapesHeader) => {
-  collapesHeader.addEventListener("click", (event) => {
-    const currentCollapesItem = document.querySelector(
+collapesHeader.forEach((e) => {
+  e.addEventListener("click", (t) => {
+    const a = document.querySelector(
       ".question-answer__detail__collapse__list.question-answer__detail__collapse__list__active"
     );
-    if (currentCollapesItem && currentCollapesItem !== collapesHeader) {
-      currentCollapesItem.classList.toggle(
-        "question-answer__detail__collapse__list__active"
-      );
-      currentCollapesItem.nextElementSibling.style.maxHeight = 0;
-    }
-    collapesHeader.classList.toggle(
-      "question-answer__detail__collapse__list__active"
-    );
-    const collapesContent = collapesHeader.nextElementSibling;
-    if (
-      collapesHeader.classList.contains(
-        "question-answer__detail__collapse__list__active"
-      )
-    ) {
-      collapesContent.style.maxHeight = collapesContent.scrollHeight + "px";
-    } else {
-      collapesContent.style.maxHeight = 0;
-    }
+    a &&
+      a !== e &&
+      (a.classList.toggle("question-answer__detail__collapse__list__active"),
+        (a.nextElementSibling.style.maxHeight = 0)),
+      e.classList.toggle("question-answer__detail__collapse__list__active");
+    const o = e.nextElementSibling;
+    e.classList.contains("question-answer__detail__collapse__list__active") ?
+      (o.style.maxHeight = o.scrollHeight + "px") :
+      (o.style.maxHeight = 0);
   });
 });
-// Collapes Cách 3
-// var collapesDiv = document.querySelectorAll('.question-answer__detail__collapse__list');
-// for(let index = 0 ; index < collapesDiv.length ; index++){
-//     collapesDiv[index].addEventListener('click', () =>{
-//         const currentCollapesItem = document.querySelector('.question-answer__detail__collapse__list__active');
-//         if(currentCollapesItem && currentCollapesItem !== collapesDiv){
-//             currentCollapesItem.classList.toggle('question-answer__detail__collapse__list__active');
-//             currentCollapesItem.nextElementSibling.style.maxHeight = 0;
-//         }
-//         collapesDiv[index].classList.toggle('question-answer__detail__collapse__list__active');
-//         let collapesContent = collapesDiv[index].nextElementSibling;
-//         if(collapesDiv[index].classList.contains('question-answer__detail__collapse__list__active')){
-//             collapesContent.style.maxHeight = collapesContent.scrollHeight + 'px'
-//         }else{
-//             collapesContent.style.maxHeight = 0;
-//         }
-//     })
-// }

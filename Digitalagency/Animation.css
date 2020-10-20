@@ -4,8 +4,8 @@
     position: fixed !important;
     top: 0 !important;
     width:100% !important;
-    background:#fff !important;
-    color:black !important;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%) !important;
+    color:whitesmoke !important;
     z-index:9 !important;
 }
 @keyframes hideIn3{

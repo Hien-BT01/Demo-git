@@ -1,7 +1,8 @@
 $light__red:#da2c46;
 $background-linear__nav:linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-$white-text:#fff;
+$white-item:#fff;
 $align-center:center;
+
 *{
     margin: 0;
     padding: 0;
@@ -50,7 +51,7 @@ $align-center:center;
         outline: none;
         background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
         font-size: 18px;
-        color:$white-text;
+        color:$white-item;
         font-weight: 700;
         border-top-right-radius:24px;
         border-bottom-right-radius: 24px;
@@ -84,7 +85,7 @@ $align-center:center;
     &-title{
         font-size: 3.875rem;
         font-weight: 700;
-        color:$white-text;
+        color:$white-item;
         span{
             color:$light__red;
         }
@@ -121,5 +122,57 @@ $align-center:center;
         font-weight: 500;
         font-size: 18px;
         word-break: break-all;
+    }
+    &__item{
+        transition: all 0.5s ease-in-out;
+        &__image{
+            overflow: hidden;
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 35px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+            transition: all 500ms ease;
+        }
+        &__link{
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            .image-random{
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover;
+            }
+        }
+        &__content{
+            position: relative;
+            background: $white-item;
+            padding: 1.5rem;
+            font-weight: 700;
+            font-family: 'Krona One';
+            border-radius: 0.8rem;
+            cursor: pointer;
+            transition: all 0.8s ease-in-out;
+            &:after{
+                content: '';
+                position: absolute;
+                display: block;
+                bottom: 100%;
+                left:50%;
+                transform: translateX(-50%);
+                border-style: solid;
+                border-width: 20px;
+                border-top-color:transparent;
+                border-left-color: transparent;
+                border-right-color:transparent;
+                border-bottom-color:$white-item;
+            }
+        }
+        &:hover{
+            transform: translateY(-10px);
+        }
+        &:hover &__content{
+            color:$light__red;
+        }
     }
 }

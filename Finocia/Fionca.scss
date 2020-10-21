@@ -2,7 +2,7 @@ $light__red:#da2c46;
 $background-linear__nav:linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
 $white-item:#fff;
 $align-center:center;
-
+@import './_mixin_Fionca';
 *{
     margin: 0;
     padding: 0;
@@ -100,17 +100,16 @@ $align-center:center;
 }
 .menu-demo{
     padding: 6rem 5rem;
-    text-align: $align-center;
-    position: relative;
-    background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+    @include titleItem(relative,center);
+    @include bgcItem(linear-gradient(to top, #bdc2e8 1%, #bdc2e8 1%, #e6dee9 100%));
     text-transform: capitalize;
     &__title{
         position: relative;
         color:#454545;
     }
     &__heading{
-        font-family: 'Krona One', sans-serif;
-        color:#454545;
+        @include fontText('Krona One');
+        color:#454545;  
         font-size: 2rem;
         font-weight: 500;
         position: relative;
@@ -121,7 +120,6 @@ $align-center:center;
     &__content{
         font-weight: 500;
         font-size: 18px;
-        word-break: break-all;
     }
     &__item{
         transition: all 0.5s ease-in-out;
@@ -141,7 +139,7 @@ $align-center:center;
                 width: 100%;
                 height: 100%;
                 display: block;
-                object-fit: cover;
+                object-fit: cover;      
             }
         }
         &__content{
@@ -173,6 +171,58 @@ $align-center:center;
         }
         &:hover &__content{
             color:$light__red;
+        }
+    }
+}
+.feature{
+    @include titleItem(relative,center);
+    @include bgcItem(linear-gradient(to top, #bdc2e8 100%, #bdc2e8 1%, #e6dee9 1%));
+    text-transform: capitalize;
+    padding: 0 4rem;
+    &__title{
+        position: relative;
+    }
+    &__heading{
+        @include fontText('Krona One');
+        @include textColor(#454545);
+        font-size: 2rem;
+        @include fontweightText(500);
+        span{
+            @include textColor($light__red);
+        }
+    }
+    &__list-desc{
+        font-weight: 500;
+        font-size: 18px;
+        @include textColor(rgba(0,0,0,0.5));
+    }
+    &__item{
+        padding: 30px 12px;
+        transition: all 0.5s ease-in-out;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5), 0 0 20px rgba(0,0,0,0.5);
+        cursor: pointer;
+        &__content{
+           .brand-logo{
+               width: 100%;
+           }
+           &-heading{
+               line-height: 30px;
+               font-size: 1.2rem;
+               @include fontText('Krona One');
+               @include fontweightText(700);
+               text-transform: capitalize;
+               @include textGradient(linear-gradient(to right, #30CFD0 0%, #330867 100%));
+           }
+           &-desc{
+               @include fontweightText(500);
+               font-size: 14px;
+               line-height: 30px; 
+           }
+        }
+        &__content-image{
+            max-width: 40%;
+            object-fit: cover;
         }
     }
 }

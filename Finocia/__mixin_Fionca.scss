@@ -1,0 +1,21 @@
+@mixin titleItem($valuePosition,$alignText) {
+    position: $valuePosition;
+    text-align: $alignText;
+}
+@mixin bgcItem($bgc) {
+    background-image:$bgc;
+}
+@mixin textColor($colorText){
+    color:$colorText;
+}
+@mixin fontweightText($fontweightValue){
+    font-weight: $fontweightValue;
+}
+@mixin fontText($font:'sans-serif'){
+    font-family: $font;
+}
+@mixin textGradient($color) {
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

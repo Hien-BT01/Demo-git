@@ -25,6 +25,11 @@
   height: 100%;
   object-fit: cover;
 }
+@media screen and (max-width: 575px) {
+  .nav-items .logo {
+    display: none;
+  }
+}
 .nav-items__menu {
   display: flex;
   flex-wrap: wrap;
@@ -76,6 +81,12 @@
 .nav-items__button:hover::before {
   opacity: 1;
   transform: none;
+}
+@media screen and (max-width: 575px) {
+  .nav-items__button {
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+  }
 }
 
 .banner__section {
@@ -248,7 +259,6 @@
 .footer__box-content {
   color: #fff;
   margin: 0 auto;
-  width: 35%;
   z-index: 2;
 }
 .footer__box-content__title {
@@ -259,7 +269,7 @@
   color: #da2c46;
 }
 .footer__box-content__button {
-  display: block;
+  display: inline-block;
   position: relative;
   outline: none;
   padding: 12px 3.5rem;

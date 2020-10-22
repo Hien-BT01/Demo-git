@@ -11,8 +11,12 @@ $align-center:center;
 .nav-items{
     position: relative;
     padding: 0 3rem;
-    background-image: $background-linear__nav;
+    @include bgcItem(linear-gradient(to top, #bdc2e8 1%, #bdc2e8 1%, #e6dee9 100%));
+    box-shadow: 0 0 1.2rem rgba(0,0,0,0.5),0 0 2.4rem rgba(0,0,0,0.3);
     max-height: 25vh;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     .logo{
         padding: 1.5rem 0;
         position: relative;
@@ -49,7 +53,7 @@ $align-center:center;
         padding: 12px 2.5rem;
         border:none;
         outline: none;
-        background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+        background:$light__red;
         font-size: 18px;
         color:$white-item;
         font-weight: 700;
@@ -81,8 +85,9 @@ $align-center:center;
     text-align: $align-center;
     padding: 7rem 6rem;
     font-family:'Poppins','Roboto','sans-serif';
-    background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
     &-title{
+        transform: translateY(30%);
         font-size: 3.875rem;
         font-weight: 700;
         color:$white-item;
@@ -178,7 +183,7 @@ $align-center:center;
     @include titleItem(relative,center);
     @include bgcItem(linear-gradient(to top, #bdc2e8 100%, #bdc2e8 1%, #e6dee9 1%));
     text-transform: capitalize;
-    padding: 0 4rem;
+    padding: 0 4rem 4rem 4rem;
     &__title{
         position: relative;
     }
@@ -212,7 +217,7 @@ $align-center:center;
                @include fontText('Krona One');
                @include fontweightText(700);
                text-transform: capitalize;
-               @include textGradient(linear-gradient(to right, #30CFD0 0%, #330867 100%));
+               @include textGradient(linear-gradient(to top, #5ee7df 0%, #b490ca 100%));
            }
            &-desc{
                @include fontweightText(500);
@@ -224,5 +229,100 @@ $align-center:center;
             max-width: 40%;
             object-fit: cover;
         }
+    }
+}
+.footer{
+    padding: 16rem 0;
+    @include titleItem(relative,center);
+    background-image:url(./business-people-office.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &__box-content{
+        color:$white-item;
+        margin: 0 auto;
+        width: 35%;
+        z-index: 2;
+        &__title{
+            @include fontText('Yeseva One');
+            line-height: 3rem;
+            span{
+                color:$light__red;
+            }
+        }
+        &__button{
+            display: block;
+            position: relative;
+            outline: none;
+            padding: 12px 3.5rem;
+            border-radius: 0.8rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            overflow: hidden;
+            z-index: 2;
+            transition: all 0.5s linear;
+            @include textColor($light__red);
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background: $light__red;
+                transition: all 0.5s ease-in-out;
+                transform: translateX(-20%);
+                opacity: 0;
+                z-index: -1;
+            }
+            &:hover::before{
+                transform: none;
+                opacity: 1;
+            }
+            &:hover{
+                color: $white-item;
+            }
+
+        }
+    }
+    &__bgc{
+        @include abs__bgc();
+    }
+}
+.button__scroll-top{
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.125rem;
+    background: $white-item;
+    color:#000;
+    outline: none;
+    border: none;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: all 0.5s linear;
+    animation: pulse 2s linear infinite;
+    i{
+        &:after{
+            position: absolute;
+            z-index: -1;
+            content: '';
+            top: 100%;
+            left: 5%;
+            height: 10px;
+            width: 90%;
+            opacity: 1;
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
+        }
+    }
+    &:before{
+        position: absolute;
+        content: '';
+    }
+    &:hover{
+        background:$light__red;
+        color:$white-item;
     }
 }

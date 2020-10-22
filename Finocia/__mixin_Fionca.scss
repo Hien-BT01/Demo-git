@@ -15,7 +15,16 @@
     font-family: $font;
 }
 @mixin textGradient($color) {
-    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    background: $color;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+@mixin abs__bgc() {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
 }

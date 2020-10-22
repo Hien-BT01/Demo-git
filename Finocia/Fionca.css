@@ -7,8 +7,12 @@
 .nav-items {
   position: relative;
   padding: 0 3rem;
-  background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+  background-image: linear-gradient(to top, #bdc2e8 1%, #bdc2e8 1%, #e6dee9 100%);
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.5), 0 0 2.4rem rgba(0, 0, 0, 0.3);
   max-height: 25vh;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 .nav-items .logo {
   padding: 1.5rem 0;
@@ -46,7 +50,7 @@
   padding: 12px 2.5rem;
   border: none;
   outline: none;
-  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  background: #da2c46;
   font-size: 18px;
   color: #fff;
   font-weight: 700;
@@ -78,9 +82,10 @@
   text-align: center;
   padding: 7rem 6rem;
   font-family: "Poppins", "Roboto", "sans-serif";
-  background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
 }
 .banner__section-title {
+  transform: translateY(30%);
   font-size: 3.875rem;
   font-weight: 700;
   color: #fff;
@@ -181,7 +186,7 @@
   text-align: center;
   background-image: linear-gradient(to top, #bdc2e8 100%, #bdc2e8 1%, #e6dee9 1%);
   text-transform: capitalize;
-  padding: 0 4rem;
+  padding: 0 4rem 4rem 4rem;
 }
 .feature__title {
   position: relative;
@@ -216,7 +221,7 @@
   font-family: "Krona One";
   font-weight: 700;
   text-transform: capitalize;
-  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -228,6 +233,107 @@
 .feature__item__content-image {
   max-width: 40%;
   object-fit: cover;
+}
+
+.footer {
+  padding: 16rem 0;
+  position: relative;
+  text-align: center;
+  background-image: url(./business-people-office.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.footer__box-content {
+  color: #fff;
+  margin: 0 auto;
+  width: 35%;
+  z-index: 2;
+}
+.footer__box-content__title {
+  font-family: "Yeseva One";
+  line-height: 3rem;
+}
+.footer__box-content__title span {
+  color: #da2c46;
+}
+.footer__box-content__button {
+  display: block;
+  position: relative;
+  outline: none;
+  padding: 12px 3.5rem;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  overflow: hidden;
+  z-index: 2;
+  transition: all 0.5s linear;
+  color: #da2c46;
+}
+.footer__box-content__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #da2c46;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-20%);
+  opacity: 0;
+  z-index: -1;
+}
+.footer__box-content__button:hover::before {
+  transform: none;
+  opacity: 1;
+}
+.footer__box-content__button:hover {
+  color: #fff;
+}
+.footer__bgc {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.button__scroll-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.125rem;
+  background: #fff;
+  color: #000;
+  outline: none;
+  border: none;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: all 0.5s linear;
+  animation: pulse 2s linear infinite;
+}
+.button__scroll-top i:after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 1;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
+}
+.button__scroll-top:before {
+  position: absolute;
+  content: "";
+}
+.button__scroll-top:hover {
+  background: #da2c46;
+  color: #fff;
 }
 
 /*# sourceMappingURL=Fionca.css.map */

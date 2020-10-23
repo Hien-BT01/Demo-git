@@ -139,6 +139,9 @@
   font-weight: 500;
   font-size: 18px;
 }
+.menu-demo .animation_flip {
+  cursor: pointer;
+}
 .menu-demo__item {
   transition: all 0.5s ease-in-out;
 }
@@ -151,8 +154,6 @@
   transition: all 500ms ease;
 }
 .menu-demo__item__link {
-  text-decoration: none;
-  display: block;
   width: 100%;
 }
 .menu-demo__item__link .image-random {

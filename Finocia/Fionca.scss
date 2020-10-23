@@ -133,6 +133,9 @@ $align-center:center;
         font-weight: 500;
         font-size: 18px;
     }
+    .animation_flip{
+        cursor: pointer;
+    }
     &__item{
         transition: all 0.5s ease-in-out;
         &__image{
@@ -144,8 +147,6 @@ $align-center:center;
             transition: all 500ms ease;
         }
         &__link{
-            text-decoration: none;
-            display: block;
             width: 100%;
             .image-random{
                 width: 100%;

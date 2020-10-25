@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -37,10 +41,11 @@
   align-items: center;
 }
 .nav-items__menu__item {
+  font-family: "Krona One";
   line-height: 2rem;
   margin-bottom: 0;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   transition: all 0.5s;
   color: rgba(0, 0, 0, 0.5);
@@ -114,6 +119,10 @@
   }
 }
 
+.card-flip {
+  min-height: 75vh;
+}
+
 .menu-demo {
   padding: 6rem 5rem;
   position: relative;
@@ -142,15 +151,155 @@
 .menu-demo .animation_flip {
   cursor: pointer;
 }
+.menu-demo .flipped {
+  transform: rotateY(180deg);
+}
+.menu-demo__list__items .card-flip:nth-of-type(1) .card-front {
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-demo__list__items .card-flip:nth-of-type(1) .card-front-text {
+  background: linear-gradient(to right, #e53935, #e35d5b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-family: "Staatliches";
+}
+.menu-demo__list__items .card-flip:nth-of-type(2) .card-front {
+  background-image: linear-gradient(to right, #232526, #414345);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-demo__list__items .card-flip:nth-of-type(2) .card-front-text {
+  background: linear-gradient(to right, #e53935, #e35d5b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-family: "Staatliches";
+}
+.menu-demo__list__items .card-flip:nth-of-type(3) .card-front {
+  background-image: linear-gradient(to right, #dae2f8, #d6a4a4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-demo__list__items .card-flip:nth-of-type(3) .card-front-text {
+  background: linear-gradient(to right, #e53935, #e35d5b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-family: "Staatliches";
+}
+.menu-demo__list__items .card-flip:nth-of-type(4) .card-front {
+  background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-demo__list__items .card-flip:nth-of-type(4) .card-front-text {
+  background: linear-gradient(to right, #e53935, #e35d5b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-family: "Staatliches";
+}
+.menu-demo__list__items .card-flip:nth-of-type(5) .card-front {
+  background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-demo__list__items .card-flip:nth-of-type(5) .card-front-text {
+  background: linear-gradient(to right, #e53935, #e35d5b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-family: "Staatliches";
+}
+.menu-demo__list__items .card-flip:nth-of-type(6) .card-front {
+  background-image: linear-gradient(to right, #e55d87, #5fc3e4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-demo__list__items .card-flip:nth-of-type(6) .card-front-text {
+  background: linear-gradient(to right, #e53935, #e35d5b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-family: "Staatliches";
+}
+.menu-demo__list__items .card-flip:nth-of-type(7) .card-front {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-demo__list__items .card-flip:nth-of-type(7) .card-front-text {
+  background: linear-gradient(to right, #e53935, #e35d5b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-family: "Staatliches";
+}
+.menu-demo__list__items .card-flip:nth-of-type(8) .card-front {
+  background-image: linear-gradient(to top, #eef2f3 0%, #9b23ea 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-demo__list__items .card-flip:nth-of-type(8) .card-front-text {
+  background: linear-gradient(to right, #e53935, #e35d5b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-family: "Staatliches";
+}
+.menu-demo__list__items .card-flip:nth-of-type(9) .card-front {
+  background-image: linear-gradient(to right, #0052d4, #4364f7, #6fb1fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-demo__list__items .card-flip:nth-of-type(9) .card-front-text {
+  background: linear-gradient(to right, #e53935, #e35d5b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-family: "Staatliches";
+}
 .menu-demo__item {
-  transition: all 0.5s ease-in-out;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease-in-out;
+}
+.menu-demo__item .card-front, .menu-demo__item .card-back {
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  transition: all 0.8s ease-in-out;
+  overflow: hidden;
+}
+.menu-demo__item .card-front-text {
+  color: #fff;
+  font-size: 2rem;
+}
+.menu-demo__item .card-back {
+  transform: rotateY(180deg);
 }
 .menu-demo__item__image {
   overflow: hidden;
+  border-radius: 10px;
   width: 100%;
-  border-radius: 5px;
   margin-bottom: 35px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
   transition: all 500ms ease;
 }
 .menu-demo__item__link {
@@ -191,6 +340,9 @@
 }
 .menu-demo__item:hover .menu-demo__item__content {
   color: #da2c46;
+}
+.menu-demo__item.flipped {
+  transform: rotateY(180deg);
 }
 
 .feature {
@@ -314,8 +466,8 @@
 
 .button__scroll-top {
   position: fixed;
-  bottom: 1.5rem;
   right: 1.125rem;
+  bottom: 100%;
   background: #fff;
   color: #000;
   outline: none;
@@ -324,7 +476,7 @@
   width: 3rem;
   border-radius: 50%;
   font-size: 1.5rem;
-  transition: all 0.5s linear;
+  transition: all 1s linear;
   animation: pulse 2s linear infinite;
 }
 .button__scroll-top i:after {
@@ -345,6 +497,10 @@
 .button__scroll-top:hover {
   background: #da2c46;
   color: #fff;
+}
+
+.scroll_toTop {
+  bottom: 5% !important;
 }
 
 /*# sourceMappingURL=Fionca.css.map */

@@ -19,6 +19,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+@mixin front_site($gradient_color){
+    background-image: $gradient_color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @mixin abs__bgc() {
     position: absolute;
     display: block;

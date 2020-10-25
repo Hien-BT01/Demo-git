@@ -435,7 +435,6 @@ html{
     width: 3rem;
     border-radius: 50%;
     font-size: 1.5rem;
-    transition: all 1s linear;
     animation: pulse 2s linear infinite;
     i{
         &:after{
@@ -461,4 +460,5 @@ html{
 }
 .scroll_toTop{
     bottom: 5% !important;
+    transition: all 1s linear;
 }

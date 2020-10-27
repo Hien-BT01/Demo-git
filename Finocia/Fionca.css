@@ -296,12 +296,14 @@ html {
   transform: rotateY(180deg);
 }
 .menu-demo__item__image {
+  height: 100%;
   overflow: hidden;
   border-radius: 10px;
   width: 100%;
   transition: all 500ms ease;
 }
 .menu-demo__item__link {
+  height: 100%;
   width: 100%;
 }
 .menu-demo__item__link .image-random {

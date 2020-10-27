@@ -115,7 +115,7 @@ html{
     }
 }
 .card-flip{
-    min-height: 75vh;
+    min-height: 80vh;
 }
 .menu-demo{
     padding: 6rem 5rem;
@@ -267,7 +267,6 @@ html{
             overflow: hidden;
             border-radius: 10px;
             width: 100%;
-            margin-bottom: 35px;
             transition: all 500ms ease;
         }
         &__link{
@@ -277,30 +276,6 @@ html{
                 height: 100%;
                 display: block;
                 object-fit: cover;      
-            }
-        }
-        &__content{
-            position: relative;
-            background: $white-item;
-            padding: 1.5rem;
-            font-weight: 700;
-            font-family: 'Krona One';
-            border-radius: 0.8rem;
-            cursor: pointer;
-            transition: all 0.8s ease-in-out;
-            &:after{
-                content: '';
-                position: absolute;
-                display: block;
-                bottom: 100%;
-                left:50%;
-                transform: translateX(-50%);
-                border-style: solid;
-                border-width: 20px;
-                border-top-color:transparent;
-                border-left-color: transparent;
-                border-right-color:transparent;
-                border-bottom-color:$white-item;
             }
         }
         &:hover{
@@ -344,6 +319,7 @@ html{
         cursor: pointer;
         &__content{
            .brand-logo{
+               height: 100%;
                width: 100%;
            }
            &-heading{

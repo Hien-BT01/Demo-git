@@ -120,7 +120,7 @@ html {
 }
 
 .card-flip {
-  min-height: 75vh;
+  min-height: 80vh;
 }
 
 .menu-demo {
@@ -299,7 +299,6 @@ html {
   overflow: hidden;
   border-radius: 10px;
   width: 100%;
-  margin-bottom: 35px;
   transition: all 500ms ease;
 }
 .menu-demo__item__link {
@@ -310,30 +309,6 @@ html {
   height: 100%;
   display: block;
   object-fit: cover;
-}
-.menu-demo__item__content {
-  position: relative;
-  background: #fff;
-  padding: 1.5rem;
-  font-weight: 700;
-  font-family: "Krona One";
-  border-radius: 0.8rem;
-  cursor: pointer;
-  transition: all 0.8s ease-in-out;
-}
-.menu-demo__item__content:after {
-  content: "";
-  position: absolute;
-  display: block;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-style: solid;
-  border-width: 20px;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: #fff;
 }
 .menu-demo__item:hover {
   transform: translateY(-10px);
@@ -377,6 +352,7 @@ html {
   cursor: pointer;
 }
 .feature__item__content .brand-logo {
+  height: 100%;
   width: 100%;
 }
 .feature__item__content-heading {

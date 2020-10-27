@@ -264,12 +264,14 @@ html{
             transform: rotateY(180deg);
         }
         &__image{
+            height: 100%;
             overflow: hidden;
             border-radius: 10px;
             width: 100%;
             transition: all 500ms ease;
         }
         &__link{
+            height: 100%;
             width: 100%;
             .image-random{
                 width: 100%;

@@ -48,7 +48,7 @@ $('.button__scroll-top').click(function () {
 
 // flow up items
 $(window).scroll(function () {
-    if ($(window).scrollTop() >= 2150) {
+    if ($(window).scrollTop() >= 1900) {
         $('.flow-up-item-1').addClass('flow-up');
     }
     if ($(window).scrollTop() > 2500) {

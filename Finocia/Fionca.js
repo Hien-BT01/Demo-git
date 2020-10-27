@@ -48,10 +48,10 @@ $('.button__scroll-top').click(function () {
 
 // flow up items
 $(window).scroll(function () {
-    if ($(window).scrollTop() >= 2200) {
+    if ($(window).scrollTop() >= 2150) {
         $('.flow-up-item-1').addClass('flow-up');
     }
-    if ($(window).scrollTop() >= 2500) {
+    if ($(window).scrollTop() > 2500) {
         $('.flow-up-item-2').addClass('flow-up');
     }
 })

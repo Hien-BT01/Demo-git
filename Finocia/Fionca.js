@@ -17,6 +17,7 @@
 //         scrollTop: 0
 //     }, 1000);
 // })
+
 // this is for after clicking once, we have to moveOut the mouse over the element, then we can click again
 
 var flipAnimation = document.querySelectorAll(".animation_flip");
@@ -45,13 +46,21 @@ $('.button__scroll-top').click(function () {
     }, 50);
 });
 
-const flowUpItems1 = document.querySelectorAll('.flow-up-item-1');
-const flowUpItems2 = document.querySelectorAll('.flow-up-item-2')
-
 // flow up items
+$(window).scroll(function () {
+    if ($(window).scrollTop() >= 2200) {
+        $('.flow-up-item-1').addClass('flow-up');
+    }
+    if ($(window).scrollTop() >= 2500) {
+        $('.flow-up-item-2').addClass('flow-up');
+    }
+})
 
-// $(window).scroll(function () {
-//     if ($(window).scrollTop() >= 2800) {
-
-//     }
-// })
+$(document).ready(function () {
+    $('.loading').delay(1000).fadeOut();
+})
+// const loadingPage = document.querySelector(".loading");
+// setTimeout(() => {
+//     loadingPage.classList.add('afterLoading')
+// }, 2000);
+// console.log(loadingPage);

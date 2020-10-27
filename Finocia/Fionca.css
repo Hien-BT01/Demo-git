@@ -1,11 +1,60 @@
 html {
   scroll-behavior: smooth;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.afterLoading {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.8s linear;
+}
+.loading {
+  position: relative;
+  height: 120vh;
+  background-image: linear-gradient(to top, #bdc2e8 1%, #bdc2e8 1%, #e6dee9 100%);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loading .name__page {
+  margin-top: 5rem;
+  letter-spacing: 3rem;
+  font-size: 6rem;
+  color: #da2c46;
+}
+.loading__waiting {
+  width: 13rem;
+  height: 13rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-top: 10px solid #e74c3c;
+  position: relative;
+  animation: loading 2s linear forwards;
+}
+.loading__waiting::before, .loading__waiting::after {
+  content: "";
+  width: 13rem;
+  height: 13rem;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.loading__waiting:after {
+  border-top: 10px solid #e67e22;
+  transform: rotate(120deg);
+}
+.loading__waiting::before {
+  border-top: 10px solid #3498db;
+  transform: rotate(240deg);
 }
 
 .nav-items {
@@ -345,6 +394,9 @@ html {
   font-weight: 500;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.5);
+}
+.feature .flow-up {
+  animation: flowUp 0.5s linear forwards;
 }
 .feature__item {
   padding: 30px 12px;

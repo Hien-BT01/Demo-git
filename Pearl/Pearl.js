@@ -3,21 +3,29 @@ let imageDemosCustomMades = document.querySelectorAll("[data-content]");
 buttonDesmosCustomMades.forEach(tab => {
     tab.addEventListener('click',() => {
         const buttonTarget = tab.getAttribute('data-button-target');
+        buttonDesmosCustomMades.forEach(tab => {
+            tab.classList.remove("colorChecked");
+        })
+        tab.classList.add("colorChecked");
         imageDemosCustomMades.forEach((imageDemosCustomMade) => {
             const dataContents = imageDemosCustomMade.getAttribute('data-content').split(" ");
             //imageDemosCustomMade.classList.add("zoom-in");
             // let timeOut = setTimeout(function(){
             //     imageDemosCustomMade.classList.add("noneChecked");
             // },10)
+            // imageDemosCustomMade.classList.add("noneChecked");
+        
+            imageDemosCustomMade.classList.remove("zoom-out");
+            imageDemosCustomMade.classList.add("zoom-in");
             imageDemosCustomMade.classList.add("noneChecked");
-            // imageDemosCustomMade.classList.remove("zoom-out");
-            // imageDemosCustomMade.classList.add("zoom-in");
-            console.log(dataContents);
+            // console.log($(imageDemosCustomMade));
             dataContents.forEach((e) => {
                 if(e === buttonTarget) {
                     // imageDemosCustomMade.classList.remove("zoom-in");
+                    // $(imageDemosCustomMade).show();
                     imageDemosCustomMade.classList.remove("noneChecked");
                     imageDemosCustomMade.classList.add("zoom-out");
+                    imageDemosCustomMade.classList.remove("zoom-in");
                     // clearTimeout(timeOut);
                     // setTimeout(function(){
                     //     imageDemosCustomMade.classList.add("zoom-out");

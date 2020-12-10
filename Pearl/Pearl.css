@@ -344,30 +344,28 @@ a {
   border: none;
   background: transparent;
   letter-spacing: 0.3rem;
-}
-.Demos-box .Demos-list .Demos-list__topics .topic-color {
-  display: inline-block;
-  position: relative;
   transition: all 0.3s linear;
-  padding-bottom: 0.5rem;
+  position: relative;
 }
-.Demos-box .Demos-list .Demos-list__topics .topic-color::after {
+.Demos-box .Demos-list .Demos-list__topics .topic::after {
   content: "";
   position: absolute;
+  left: 0;
   bottom: 0;
   display: block;
-  left: 0;
   width: 100%;
   height: 0.2rem;
-  background-color: #da2c46;
-  transition: all 0.3s linear;
+  background: #da2c46;
   opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
 }
-.Demos-box .Demos-list .Demos-list__topics .topic-color:hover {
+.Demos-box .Demos-list .Demos-list__topics .topic:hover {
   color: #da2c46;
 }
-.Demos-box .Demos-list .Demos-list__topics .topic-color:hover::after {
+.Demos-box .Demos-list .Demos-list__topics .topic:hover:after {
   opacity: 1;
+  visibility: visible;
 }
 .Demos-box .Demos-list .Demos-list__topics .colorChecked {
   position: relative;
@@ -376,6 +374,7 @@ a {
 }
 .Demos-box .Demos-list .Demos-list__topics .colorChecked::after {
   opacity: 1 !important;
+  visibility: visible;
 }
 .Demos-box .Demos-list__items {
   padding-top: 3rem;
@@ -389,6 +388,11 @@ a {
 .Demos-box .Demos-list__items .items-link .items-image {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  transition: all 0.3s linear;
+}
+.Demos-box .Demos-list__items .items-link .items-image:hover {
+  filter: brightness(70%);
 }
 .Demos-box .Demos-list__items-desc {
   color: #fefefe;
@@ -405,15 +409,16 @@ a {
 }
 .Demos-box .Demos-list__items .col-lg-3 {
   margin-top: 2.5rem;
-  display: block;
 }
 .Demos-box .Demos-list__items .noneChecked {
   display: none;
 }
 .Demos-box .Demos-list__items .zoom-out {
+  display: block;
   animation: zoom_out 0.3s linear forwards;
 }
 .Demos-box .Demos-list__items .zoom-in {
+  display: block;
   animation: zoom_in 0.3s linear forwards;
 }
 
@@ -474,13 +479,13 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  border-right: 1px solid #fefefe;
 }
 .advantages-box .col-lg-3 .posi-icon {
   font-size: 5rem;
   margin-bottom: 3rem;
 }
 .advantages-box .col-lg-3 .positive-title {
-  font-size: 2rem;
   background: linear-gradient(-225deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -488,7 +493,7 @@ a {
   letter-spacing: 0.2rem;
 }
 .advantages-box .col-lg-3 .positive-description {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   background: linear-gradient(-225deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -509,14 +514,66 @@ a {
 }
 
 .plugins-boxes {
-  padding: 8rem 3rem;
+  padding: 14rem 0 7rem;
+  background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
 }
-.plugins-boxes .plugin-images {
+.plugins-boxes__wrap {
+  display: flex;
+  align-items: center;
   width: 100%;
 }
-.plugins-boxes .plugin-images img {
-  width: 100%;
-  object-fit: cover;
+.plugins-boxes__wrap .plugin-list {
+  display: flex;
+  width: 50%;
+  flex-basis: 50%;
+  align-items: center;
+  padding: 0 50px;
+}
+.plugins-boxes__wrap .plugin-list__item {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  text-align: center;
+  width: 25%;
+}
+.plugins-boxes__wrap .plugin-list__item .plugin__item-box {
+  min-height: 22rem;
+}
+.plugins-boxes__wrap .plugin-list__item .plugin__item-box img {
+  width: 10.5rem;
+  height: auto;
+  margin: 0 auto 2.5rem;
+}
+.plugins-boxes__wrap .plugin-list__item .plugin__item-box .plugin-description {
+  background: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+.plugins-boxes__wrap .plugins__infor {
+  max-width: 100%;
+  width: 50%;
+  flex: 0 0 50%;
+  margin-bottom: 7rem;
+  margin-left: 2.5rem;
+  text-align: left;
+}
+.plugins-boxes__wrap .plugins__infor .plugin__content {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3rem;
+}
+.plugins-boxes__wrap .plugins__infor .plugin__content-color {
+  color: #da2c46;
+}
+.plugins-boxes__wrap .plugins__infor .plugin__subtitle {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  line-height: 5rem;
 }
 
 /*# sourceMappingURL=Pearl.css.map */

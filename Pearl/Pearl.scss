@@ -166,9 +166,11 @@ a{
                         &::after{
                             @include subMenuWhiteSpace();
                         }
-                        &.activeSub{
-                            display: block !important;
-                            animation: Top_Down 0.3s linear forwards;
+                        @media screen and (max-width:991px){
+                            &.activeSub{
+                                display: block !important;
+                                animation: Top_Down 0.3s linear forwards;
+                            }
                         }
                     }
                     .subMenu-short-list{
@@ -184,10 +186,6 @@ a{
                         &::after{
                             left: 0;
                             @include subMenuWhiteSpace();
-                        }
-                        &.activeSub{
-                            display: block !important;
-                            animation: Top_Down 0.3s linear forwards;
                         }
                     }
                     &:hover .subMenu-list, &:hover .subMenu-short-list{
@@ -239,6 +237,10 @@ a{
                             width: 100% !important;
                             visibility: 1;
                             border-radius: 0;
+                            &.activeSub{
+                                display: block !important;
+                                animation: Top_Down 0.3s linear forwards;
+                            }
                             .subMenu-list__hide,.subMenu-short-list__items{
                                 padding: 0;
                                 display: block;
@@ -340,7 +342,7 @@ a{
             cursor: pointer;
             top: 0;
             right: 1rem;
-            span{
+            span.button-click{
                 position: absolute;
                 display: block;
                 height: 3px;
@@ -366,6 +368,17 @@ a{
                 }
                 &::before{
                     top: -1rem;
+                }
+                &.closeX{
+                    background: transparent;
+                    &::after{
+                        top: 0;
+                        transform: rotate(-45deg) scale(1.1);
+                    }
+                    &::before{
+                        top: 0;
+                        transform: rotate(45deg) scale(1.1);
+                    }
                 }
             }
             @media screen and (max-width: 991px){

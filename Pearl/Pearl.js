@@ -35,6 +35,7 @@ $(window).scroll(function(){
 $(".dropdown-menu__button").click(function(e){
     e.stopPropagation()
     $(".navbar-item").toggleClass("dropdown__res");
+    $(".button-click").toggleClass("closeX")
     if($(window).width() < 975){
         $(".header-nav .container").toggleClass("nav__active");
     }
@@ -61,7 +62,6 @@ $(".menu-list__items-icon").click(function(e){
 //         subMenu.nextElementSibling.classList.toggle("activeSub");
 //     })
 // })
-
 
 // const btnTab = document.querySelectorAll("[data-button-target]");
 // const items = document.querySelectorAll("[data-content]");

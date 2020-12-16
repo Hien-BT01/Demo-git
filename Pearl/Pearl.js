@@ -26,7 +26,7 @@ dropdownIcon.addEventListener("click",(e) => {
 
 $(window).scroll(function(){
     if($(window).scrollTop() >= 50){
-        $(".header-nav").css("transition","0.3s");
+        $(".header-nav").css("transition","0.3s","ease-in-out");
         $(".header-nav").addClass("fix-navbar");
     }else{
         $(".header-nav").removeClass("fix-navbar")
@@ -54,6 +54,11 @@ $(".menu-list__items-icon").click(function(e){
     $(this).toggleClass("updown");
     $(this).next().toggleClass("activeSub");
 });
+VanillaTilt.init(document.querySelectorAll(".image-box"), {
+    max: 30,
+    speed: 3000
+});
+
 // let subMenus = document.querySelectorAll(".menu-list__items-icon");
 // subMenus.forEach(subMenu => {
 //     subMenu.addEventListener("click",(e) => {

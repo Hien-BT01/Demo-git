@@ -1172,6 +1172,15 @@ a{
                             margin-left: 1rem;
                         }
                     }
+                    @media screen and (max-width:469px){
+                        flex-direction: column;
+                        .watch-video,button.learn-more{
+                            margin: 0;
+                        }
+                        button.learn-more{
+                            margin-bottom: 1rem;
+                        }
+                    }
                 }
             }
             @media screen and (max-width:1439px){

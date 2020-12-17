@@ -1297,6 +1297,17 @@ a {
   font-size: 1.8rem;
   margin-left: 1rem;
 }
+@media screen and (max-width: 469px) {
+  .Feature-list-boxes .Feature-list .item-box .content-box .button-box {
+    flex-direction: column;
+  }
+  .Feature-list-boxes .Feature-list .item-box .content-box .button-box .watch-video, .Feature-list-boxes .Feature-list .item-box .content-box .button-box button.learn-more {
+    margin: 0;
+  }
+  .Feature-list-boxes .Feature-list .item-box .content-box .button-box button.learn-more {
+    margin-bottom: 1rem;
+  }
+}
 @media screen and (max-width: 1439px) {
   .Feature-list-boxes .Feature-list .item-box .image-box {
     width: 55%;

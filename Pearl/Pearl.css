@@ -476,40 +476,34 @@ a {
   height: 100%;
 }
 .main-box .header-content .color-title {
-  font-size: 6rem;
+  font-size: 5rem;
   background: linear-gradient(-45deg, #cd2ca4, #e7174d 40%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Kanit", sans-serif;
-  font-weight: 900;
-}
-@media screen and (max-width: 991px) {
-  .main-box .header-content .color-title {
-    font-size: 4rem;
-  }
+  font-weight: 700;
 }
 .main-box .header-content .main__title {
-  font-size: 6rem;
+  position: relative;
+  font-size: 5rem;
   font-family: "Kanit", sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   width: 80%;
   margin-bottom: 3rem;
 }
-@media screen and (max-width: 991px) {
-  .main-box .header-content .main__title {
-    font-size: 4rem;
-  }
-}
 .main-box .header-content .main__discription {
-  font-size: 2rem;
-  width: 50%;
+  max-width: 58rem;
+  line-height: 3.2rem;
+  transition: all 0.3s linear;
+  font-size: 2.1rem;
+  margin: 0 0 3rem;
 }
 .main-box .header-content .video-button {
-  padding: 1rem 3rem;
+  padding: 0.9rem 2rem 1rem 3rem;
   border: solid 3px #fa4e40;
   border-radius: 5rem;
   color: #fa4e40;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   text-decoration: none;
   background: #fefefe;
   transition: all 0.8s ease-in-out;
@@ -522,9 +516,61 @@ a {
   color: #fefefe;
   border: 3px solid #fefefe;
 }
-.main-box .header-content .pointer {
+@media screen and (max-height: 700px) {
+  .main-box .header-content .main__discription {
+    top: auto;
+    left: auto;
+    margin: 0 auto 30px;
+    position: relative;
+  }
+}
+.main-box .pointer {
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
   font-size: 4rem;
-  margin-top: 2rem;
+  transform: translateX(-50%);
+  transition: all 0.3s linear;
+  opacity: 1;
+  visibility: visible;
+}
+@media screen and (max-width: 1199px) {
+  .main-box {
+    background-size: cover;
+    height: auto;
+    padding: 7rem 0;
+  }
+  .main-box .header-content {
+    position: relative;
+    padding: 0 1.5rem;
+    margin-top: 5rem;
+    box-sizing: border-box;
+  }
+  .main-box .header-content .main__title {
+    top: auto;
+    left: auto;
+    margin: 0 0 30px;
+  }
+  .main-box .header-content .main__discription {
+    margin: 0 0 3rem;
+    font-size: 2rem;
+    left: auto;
+    right: auto;
+  }
+  .main-box .pointer {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .main-box {
+    padding: 10rem 1.5rem 7rem;
+  }
+  .main-box .header-content .color-title, .main-box .header-content .main__title {
+    font-size: 4rem;
+    line-height: 4.6rem;
+  }
 }
 
 .Everyone-Pearl {

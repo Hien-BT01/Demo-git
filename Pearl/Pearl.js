@@ -41,6 +41,11 @@ $(".dropdown-menu__button").click(function(e){
     }
 });
 $(document).ready(function(){
+    if($(window).width() < 975){
+        $(".logo img").attr("src","https://pearl.stylemixthemes.com/landing/assets/images/header/logo-white.png");
+    }else{
+        $(".logo img").attr("src","https://pearl.stylemixthemes.com/landing/assets/images/header/logo.png");
+    }
     $(window).resize(function(){
         if($(this).width() < 975){
             $(".logo img").attr("src","https://pearl.stylemixthemes.com/landing/assets/images/header/logo-white.png");

@@ -54,8 +54,10 @@ $(document).ready(function(){
     if($(window).width() < 975){
         $(".logo img").attr("src","https://pearl.stylemixthemes.com/landing/assets/images/header/logo-white.png");
         $(".navbar-item").css("top","0");
+        $(".header-image").css("display","none");
     }else{
         $(".logo img").attr("src","https://pearl.stylemixthemes.com/landing/assets/images/header/logo.png");
+        $(".header-image").css("display","block");
     }
     $(window).resize(function(){
         if($(this).width() < 975){

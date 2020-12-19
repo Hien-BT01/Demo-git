@@ -100,6 +100,22 @@ $(document).ready(function(){
         max: 30,
         speed: 3000
     });
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 200) {
+          $(".button__scroll-top").addClass("scroll__toTop");
+        } else {
+          $(".button__scroll-top").css("transition", "1.5s");
+          $(".button__scroll-top").removeClass("scroll__toTop");
+        }
+      });
+      $(".button__scroll-top").click(function () {
+        $("html").animate(
+          {
+            scrollTop: 0,
+          },
+          50
+        );
+      });
 });
 $('.owl-carousel').owlCarousel({
     loop:true,

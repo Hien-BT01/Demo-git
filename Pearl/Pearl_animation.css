@@ -371,5 +371,10 @@
         top: 100%
     }
 }
+@keyframes scrollTop {
+    50% {
+        box-shadow: 0 0 0 5px rgb(0,0,0,.1), 0 0 0 20px rgba(86, 131, 151, 0.3);
+    }
+}
 
 

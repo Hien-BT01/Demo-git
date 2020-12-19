@@ -54,3 +54,20 @@
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
 }
+@mixin blackColorCover__Pearl(){
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+}
+@mixin image__position-top-left__Pearl($top,$left){
+    top: $top;
+    left: $left;
+}
+@mixin image__position-top-right__Pearl($top,$right){
+    top: $top;
+    right:$right;
+}

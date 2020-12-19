@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./Pearl.css" />
   <link rel="stylesheet" href="./Pearl_animation.css" />
-  <link rel="stylesheet" href="./Pearl_effect.css">
+  <link rel="stylesheet" href="./Pearl_effect.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -18,7 +18,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet" />
-  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+  <title>Pearl</title>
 </head>
 
 <body>
@@ -467,18 +472,54 @@
   <div class="main-box">
     <div class="header-content">
       <h1 class="color-title">Pearl</h1>
-      <h1 class="main__title">Business WordPress
-        <br>
+      <h1 class="main__title">
+        Business WordPress
+        <br />
         Theme
       </h1>
       <p class="main__discription">
-        Pearl is the first WP Business Theme with an incredible collection
-        of multi-niche creative WordPress templates for the market.
+        Pearl is the first WP Business Theme with an incredible collection of
+        multi-niche creative WordPress templates for the market.
       </p>
       <a href="#" class="video-button">
         Start Exploring
         <i class="fab fa-youtube"></i>
       </a>
+    </div>
+    <div class="header-image">
+      <div class="box__image">  
+        <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/main-box/business-four.jpg" alt="Pearl-image" class="main-box-image-position" width="258" height="150">
+      </div>
+      <div class="box__image">
+        <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/main-box/hosting.jpg" alt="Pearl-image" class="main-box-image-position" width="246" height="157">
+      </div>
+      <div class="box__image">
+        <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/main-box/business.jpg" alt="Pearl-image" class="main-box-image-position" width="290" height="174">
+      </div>
+      <div class="box__image">
+        <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/main-box/digital-agency.jpg" alt="Pearl-image" class="main-box-image-position" width="318" height="199">
+      </div>
+      <div class="box__image">
+        <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/main-box/creative-agency-two.jpg" alt="Pearl-image" class="main-box-image-position" width="250" height="155">
+      </div>
+      <div class="box__image">
+        <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/main-box/experience.jpg" alt="Pearl-image" class="main-box-image-position" width="233" height="74">
+      </div>
+      <div class="box__image">
+        <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/main-box/conference.jpg" alt="Pearl-image" class="main-box-image-position" width="321" height="218">
+      </div>
+      <div class="box__image">
+        <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/main-box/consulting.jpg" alt="Pearl-image" class="main-box-image-position" width="321" height="218">
+      </div>
+      <div class="box__image">
+        <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/main-box/gym.jpg" alt="Pearl-image" class="main-box-image-position" width="264" height="163">
+      </div>
+      <div class="box__image">
+        <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/main-box/business-two.jpg" alt="Pearl-image" class="main-box-image-position" width="319" height="196">
+      </div>
+      <div class="box__image">
+        <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/main-box/company.jpg" alt="Pearl-image" class="main-box-image-position" width="322" height="207">
+      </div>
     </div>
     <span class="material-icons pointer"> mouse </span>
   </div>
@@ -490,7 +531,7 @@
             Pearl is <span class="title-color">for everyone</span>
           </h2>
         </div>
-        <div class="col-lg-3 col-md-6 job-list">
+        <div class="col-lg-3 col-md-6 job-list mb-5">
           <i class="fas fa-industry job-icon"></i>
           <h5 class="job-topic mb-4">BUSINESS OWNERS</h5>
           <p class="job-demand">
@@ -991,7 +1032,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">
-          <span class="material-icons posi-icon" id="fast-performance"> speed </span>
+          <span class="material-icons posi-icon" id="fast-performance">
+            speed
+          </span>
           <h4 class="positive-title mb-4">FAST PERFORMANCE</h4>
           <p class="positive-description">
             Pearl WordPress theme has been optimized for speed, with perfect
@@ -1002,223 +1045,671 @@
           <i class="fas fa-expand posi-icon" id="responsive"></i>
           <h4 class="positive-title mb-4">FULLY RESPONSIVE</h4>
           <p class="positive-description">
-            Pearl is a fully responsive theme. Tablet, smartphone, PC, laptop, use it on whatever device you choose and
-            still get the full experience.
+            Pearl is a fully responsive theme. Tablet, smartphone, PC, laptop,
+            use it on whatever device you choose and still get the full
+            experience.
           </p>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6">
           <i class="fas fa-search posi-icon" id="seo"></i>
           <h4 class="positive-title mb-4">SEO OPTIMIZED</h4>
           <p class="positive-description">
-            Being optimized for SEO services, this WP business theme gives you full control of your ranking and search
-            engines.
+            Being optimized for SEO services, this WP business theme gives you
+            full control of your ranking and search engines.
           </p>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6">
           <i class="fas fa-user posi-icon" id="user"></i>
           <h4 class="positive-title mb-4">USER-FRIENDLY</h4>
           <p class="positive-description">
-            Get the freedom to visualize your ideas and bring them to life, thanks to its simple editor and drag and
-            drop builder.
+            Get the freedom to visualize your ideas and bring them to life,
+            thanks to its simple editor and drag and drop builder.
           </p>
         </div>
       </div>
     </div>
   </div>
   <div class="plugins-boxes">
-      <div class="container-fluid">
-          <div class="plugins-boxes__wrap">
-            <div class="plugin-list">
-              <div class="plugin-list__item">
-                <div class="plugin__item-box">
-                  <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/layer-slider.png" alt="plugin-image">
-                  <p class="plugin-description">LayerSlider WP</p>
+    <div class="container-fluid">
+      <div class="plugins-boxes__wrap">
+        <div class="plugin-list">
+          <div class="plugin-list__item">
+            <div class="plugin__item-box">
+              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/layer-slider.png"
+                alt="plugin-image" />
+              <p class="plugin-description">LayerSlider WP</p>
+            </div>
+            <div class="plugin__item-box">
+              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/booked.png"
+                alt="plugin-image" />
+              <p class="plugin-description">Booked Appointments</p>
+            </div>
+            <div class="plugin__item-box">
+              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/ninja-popups.png"
+                alt="plugin-image" />
+              <p class="plugin-description">Ninja Popups</p>
+            </div>
+          </div>
+          <div class="plugin-list__item">
+            <div class="plugin__item-box">
+              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/revolution-slider.png"
+                alt="plugin-image" />
+              <p class="plugin-description">Slider Revolution</p>
+            </div>
+            <div class="plugin__item-box">
+              <img
+                src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/сustom-login-access.png"
+                alt="plugin-image" />
+              <p class="plugin-description">Custom Login & Access</p>
+            </div>
+            <div class="plugin__item-box">
+              <img
+                src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/ultimate-addons-for-wpbakery-page-builder.png"
+                alt="plugin-image" />
+              <p class="plugin-description">Ultimate Addons for WPBakery</p>
+            </div>
+          </div>
+          <div class="plugin-list__item">
+            <div class="plugin__item-box">
+              <img
+                src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/wpbakery-page-builder.png"
+                alt="plugin-image" />
+              <p class="plugin-description">WPBakery Page Builder</p>
+            </div>
+            <div class="plugin__item-box">
+              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/booked.png"
+                alt="plugin-image" />
+              <p class="plugin-description">Easy Social Share Buttons</p>
+            </div>
+            <div class="plugin__item-box">
+              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/composium.png"
+                alt="plugin-image" />
+              <p class="plugin-description">WPBakery Extensions Addon</p>
+            </div>
+          </div>
+          <div class="plugin-list__item">
+            <div class="plugin__item-box">
+              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/subscriptio.png"
+                alt="plugin-image" />
+              <p class="plugin-description">Subscriptio</p>
+            </div>
+            <div class="plugin__item-box">
+              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/gdpr.png"
+                alt="plugin-image" />
+              <p class="plugin-description">GDPR</p>
+            </div>
+          </div>
+        </div>
+        <div class="plugins__infor">
+          <h2 class="plugin__content">
+            <span class="plugin__content-color">Premium </span>Plugins
+            Included
+          </h2>
+          <p class="plugin__subtitle">
+            Powerful and premium plugins are included in the Pearl to upgrade
+            your website with the bigger functionality. A great package of
+            additional options to create premium WordPress templates for any
+            content you want.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Feature-list-boxes">
+    <div class="Feature-list">
+      <div class="item-box">
+        <div class="image-box first-box" data-tilt data-tilt-scale="1">
+          <img
+            src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/magic-keyboard-with-mouse.jpg"
+            alt="image-box" class="image-3D" />
+          <div class="outer-image outer-image__one">
+            <img
+              src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/magic-keyboard-with-mouse-inner-one.png"
+              alt="image-box" />
+          </div>
+          <div class="outer-image outer-image__two">
+            <img
+              src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/magic-keyboard-with-mouse-inner-two.png"
+              alt="image-box" />
+          </div>
+        </div>
+        <div class="content-box">
+          <h2 class="title-box mb-5">Pearl <span>Slider</span></h2>
+          <p class="desc-box mb-5">
+            Our easy-to-use Slider, coded on Angular JS, allows effortlessly
+            creating and managing responsive slideshows with seamless
+            transitions. You can customize width and height, instantly preview
+            your slide changes, and activate an autoplay switcher.
+          </p>
+          <div class="button-box">
+            <button class="learn-more">learn more</button>
+            <button class="watch-video">
+              <span>Watch video</span> <i class="far fa-play-circle"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item-box">
+        <div class="content-box">
+          <h2 class="title-box mb-5"><span>Mega Menu</span> Options</h2>
+          <p class="desc-box mb-5">
+            An outstanding solution for large and complex menus, giving your
+            visitors an accessible and user-friendly experience. Set menus
+            with 3 level dropdown, use up to 6 columns, add images, insert
+            links and post titles and build any layout you can imagine.
+          </p>
+          <div class="button-box">
+            <button class="learn-more">learn more</button>
+            <button class="watch-video">
+              <span>Watch video</span> <i class="far fa-play-circle"></i>
+            </button>
+          </div>
+        </div>
+        <div class="image-box second-box" data-tilt data-tilt-scale="1">
+          <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/clay-ipad-pro.png"
+            alt="image-box" class="image-3D" />
+          <div class="outer-image outer-image__one">
+            <img
+              src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/clay-ipad-pro-inner-one.png"
+              alt="image-box" />
+          </div>
+        </div>
+      </div>
+      <div class="item-box">
+        <div class="image-box third-box" data-tilt data-tilt-scale="1">
+          <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/shadow-layout.jpg"
+            alt="image-box" class="image-3D" />
+          <div class="outer-image outer-image__one">
+            <img
+              src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/shadow-layout-one.jpg"
+              alt="image-box" />
+          </div>
+          <div class="outer-image outer-image__two">
+            <img
+              src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/shadow-layout-two.jpg"
+              alt="image-box" />
+          </div>
+        </div>
+        <div class="content-box">
+          <h2 class="title-box mb-5">Multiple <span>Header Layouts</span></h2>
+          <p class="desc-box mb-5">
+            Our header builder allows you to compose a header that perfectly
+            suits your needs. By using the intuitive drag and drop page
+            elements, easily move the header modules to construct the flawless
+            layout. Enjoy our pre-built library of header elements and create
+            different header types for various devices.
+          </p>
+          <div class="button-box">
+            <button class="learn-more">learn more</button>
+            <button class="watch-video">
+              <span>Watch video</span> <i class="far fa-play-circle"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item-box">
+        <div class="content-box">
+          <h2 class="title-box mb-5"><span>200+</span> UI modules</h2>
+          <p class="desc-box mb-5">
+            Create anything you want with the powerful options available. From
+            music player and contact forms to event list and post timeline.
+            Our strong and versatile set of elements and theme customization
+            options gives you the freedom and flexibility to build exceptional
+            websites.
+          </p>
+          <div class="button-box">
+            <button class="learn-more">learn more</button>
+            <button class="watch-video">
+              <span>Watch video</span> <i class="far fa-play-circle"></i>
+            </button>
+          </div>
+        </div>
+        <div class="image-box fourth-box" data-tilt data-tilt-scale="1">
+          <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-modules.png"
+            alt="image-box" class="image-3D" />
+          <div class="outer-image outer-image__one">
+            <img
+              src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-module-one.png"
+              alt="image-box" />
+          </div>
+          <div class="outer-image outer-image__two">
+            <img
+              src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-module-two.png"
+              alt="image-box" />
+          </div>
+          <div class="outer-image outer-image__three">
+            <img
+              src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-module-three.png"
+              alt="image-box" />
+          </div>
+          <div class="outer-image outer-image__four">
+            <img
+              src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-module-four.png"
+              alt="image-box" />
+          </div>
+          <div class="outer-image outer-image__five">
+            <img
+              src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-module-five.png"
+              alt="image-box" />
+          </div>
+          <div class="outer-image outer-image__six">
+            <img
+              src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-module-six.png"
+              alt="image-box" />
+          </div>
+        </div>
+      </div>
+      <div class="item-box">
+        <div class="image-box fifth-box" data-tilt data-tilt-scale="1">
+          <img
+            src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-theme-options.jpg"
+            alt="image-box" class="image-3D" />
+          <div class="outer-image outer-image__one">
+            <img
+              src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-theme-options-one.png"
+              alt="image-box" />
+          </div>
+          <div class="outer-image outer-image__two">
+            <img
+              src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-theme-options-two.png"
+              alt="image-box" />
+          </div>
+        </div>
+        <div class="content-box">
+          <h2 class="title-box mb-5">Pearl <span>Theme Options</span></h2>
+          <p class="desc-box mb-5">
+            Websites built with the Pearl Theme will never look the same. You
+            can customize every detail all over the site thanks to advanced
+            theme options. Create a quality design in minutes and apply it
+            everywhere.
+          </p>
+          <div class="button-box">
+            <button class="learn-more">learn more</button>
+            <button class="watch-video">
+              <span>Watch video</span> <i class="far fa-play-circle"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="comment-box">
+    <div class="container content-box text-center">
+      <h2 class="content-box__title">Our <span>Happy Clients</span></h2>
+      <p class="content-box__desc">
+        We are helping our customers to succeed. Learn how people all over the
+        globe use Pearl to foster the development of their business.
+      </p>
+    </div>
+    <div class="carousel-box">
+      <div class="owl-carousel owl-theme owl-loaded">
+        <div class="owl-stage-outer">
+          <div class="owl-stage">
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  Pearl is the perfect theme for any kind of projects
+                  especially blogs, newspapers, and magazine websites.
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
                 </div>
-                <div class="plugin__item-box">
-                  <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/booked.png" alt="plugin-image">
-                  <p class="plugin-description">Booked Appointments</p>
-                </div>
-                <div class="plugin__item-box">
-                  <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/ninja-popups.png" alt="plugin-image">
-                  <p class="plugin-description">Ninja Popups</p>
-                </div>
-              </div>
-              <div class="plugin-list__item">
-                <div class="plugin__item-box">
-                  <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/revolution-slider.png" alt="plugin-image">
-                  <p class="plugin-description">Slider Revolution</p>
-                </div>
-                <div class="plugin__item-box">
-                  <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/сustom-login-access.png" alt="plugin-image">
-                  <p class="plugin-description">Custom Login & Access</p>
-                </div>
-                <div class="plugin__item-box">
-                  <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/ultimate-addons-for-wpbakery-page-builder.png" alt="plugin-image">
-                  <p class="plugin-description">Ultimate Addons for WPBakery</p>
-                </div>
-              </div>
-              <div class="plugin-list__item">
-                <div class="plugin__item-box">
-                  <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/wpbakery-page-builder.png" alt="plugin-image">
-                  <p class="plugin-description">WPBakery Page Builder</p>
-                </div>
-                <div class="plugin__item-box">
-                  <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/booked.png" alt="plugin-image">
-                  <p class="plugin-description">Easy Social Share Buttons</p>
-                </div>
-                <div class="plugin__item-box">
-                  <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/composium.png" alt="plugin-image">
-                  <p class="plugin-description">WPBakery Extensions Addon</p>
-                </div>
-              </div>
-              <div class="plugin-list__item">
-                <div class="plugin__item-box">
-                  <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/subscriptio.png" alt="plugin-image">
-                  <p class="plugin-description">Subscriptio</p>
-                </div>
-                <div class="plugin__item-box">
-                  <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/plugins/gdpr.png" alt="plugin-image">
-                  <p class="plugin-description">GDPR</p>
-                </div>
+                <h3 class="author">ignaciosagone</h3>
               </div>
             </div>
-            <div class="plugins__infor">
-              <h2 class="plugin__content"><span class="plugin__content-color">Premium </span>Plugins Included</h2>
-              <p class="plugin__subtitle">Powerful and premium plugins are included in the Pearl to upgrade your website with the bigger functionality. A great package of additional options to create premium WordPress templates for any content you want.
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  Excellent customer support fast, reliable and accurate
+                  answers. The theme is very good, very good quality. Thank
+                  you to the team!
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                </div>
+                <h3 class="author">Barzek56</h3>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  Great theme, very flexible, a lot of features are included.
+                  Whatever isn't included they are very helpful to help you
+                  with.
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                </div>
+                <h3 class="author">DailyOffices</h3>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  Thank you so much for this beautifull and powerfull theme able to offer design and a large range of functionnalities.
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                </div>
+                <h3 class="author">executivenancy</h3>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  Great template with great features and very easy to customize. Next to all of this the support is excellent! Fast, correct and flexible.
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                </div>
+                <h3 class="author">mkoningprive</h3>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  A great theme : good quality, beautiful design, very nice option/shortcode, A very reactive, professionnal and helpful support.
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                </div>
+                <h3 class="author">Emmaellee</h3>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  Obviously, every template is carefully designed through an industry survey. This is really a very useful and efficient template.
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                </div>
+                <h3 class="author">nextwa</h3>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  There were a couple nuances when putting the site together, but it was wonderful to have the team help me out on my stumbles.
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                </div>
+                <h3 class="author">spideyknight</h3>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  This theme is absolutely awesome starting from beautiful premade design concepts to it's rich flexibility.
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                </div>
+                <h3 class="author">vitamin189</h3>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  Nice theme, with nice design and good customer support. Modern adn slick. Stylmix Themes is one of the best on ThemeForest.
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                </div>
+                <h3 class="author">Atman7715</h3>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  I love Pearl design and Stylemix customer support. They have solved all my problems related to the theme. I would buy it again.
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                </div>
+                <h3 class="author">Piemmetube</h3>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  I have soon Bought 3 licence from this great Theme, for different business...great design and many functionality.
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                </div>
+                <h3 class="author">elixirlab</h3>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  The customer service is very effective and fast. They solve a problem I found with a widget of the theme.
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                </div>
+                <h3 class="author">MTerente</h3>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  Very good theme. Unique set of features compared to other popular themes. Thank you Stylemix.
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                </div>
+                <h3 class="author">shubhakeerthi</h3>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <p class="item__review-comment">
+                  Several of my clients happen to really like this theme, it tends to win against other options. Use the demos!
+                </p>
+                <div class="item__review-list__rates">
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                  <i class="fas fa-star rate"></i>
+                </div>
+                <h3 class="author">eagsupply</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="comment-box__bgc-cover"></div>
+  </div>
+  <div class="more-features text-center">
+    <div class="container">
+      <h2 class="more-features__title">More <span>Features</span></h2>
+      <div class="row more-features__list">
+        <div class="col-lg-3 mb-5 col-md-6">
+          <div class="more-features__list-item  w-100">
+            <span class="material-icons more-features__list-item__icon" style="color:#1480c4">
+              highlight_alt
+              </span>
+            <h4 class="more-features__list-item__heading">Custom Visual Composer</h4>
+            <p class="more-features__list-item__desc">The optimized Visual Composer builder has a restyled back-end interface that puts all of the custom Pearl modules at your fingertips</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-5 col-md-6">
+          <div class="more-features__list-item  w-100">
+            <i class="fas fa-hand-pointer more-features__list-item__icon" style="color:#f83f3f"></i>
+            <h4 class="more-features__list-item__heading">Custom 1-Click Demo Import</h4>
+            <p class="more-features__list-item__desc">With the Pearl Demo Importer you can install your chosen demo, and all required plugins, with just one click. It couldn't be simpler!</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-5 col-md-6">
+          <div class="more-features__list-item  w-100">
+            <i class="fas fa-list-ul more-features__list-item__icon" style="color:#f31a85"></i>
+            <h4 class="more-features__list-item__heading">Advanced theme Options</h4>
+            <p class="more-features__list-item__desc">Use the Pearl Theme Options global settings to change and customize all areas of your site without touching the code.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-5 col-md-6">
+          <div class="more-features__list-item  w-100">
+            <i class="fas fa-atom more-features__list-item__icon" style="color:#1ab13e"></i>
+            <h4 class="more-features__list-item__heading">24/7 Support with Live Chat</h4>
+            <p class="more-features__list-item__desc">Our exceptional support team is always on hand and ready to help. You can use Live Chat or our Ticket system to resolve your issues in a flash.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-5 col-md-6">
+          <div class="more-features__list-item  w-100">
+            <i class="fas fa-sort-alpha-down more-features__list-item__icon" style="color:#2ee42a"></i>
+            <h4 class="more-features__list-item__heading">800+ Google Fonts</h4>
+            <p class="more-features__list-item__desc">For a truly unique look and feel, you can customize your site using Google Fonts, Standard Fonts or by uploading your custom font.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-5 col-md-6">
+          <div class="more-features__list-item  w-100">
+            <span class="material-icons more-features__list-item__icon" style="color:#6680ed">
+              system_update_alt
+            </span>
+            <h4 class="more-features__list-item__heading">Custom Icon Loader</h4>
+            <p class="more-features__list-item__desc">Upload SVG icons using our custom-built Pearl Icon Loader. Use SVG icons to display crisp content on any device.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-5 col-md-6">
+          <div class="more-features__list-item  w-100">
+            <i class="fas fa-book more-features__list-item__icon" style="color:#e7174d"></i>
+            <h4 class="more-features__list-item__heading">Extensive Documentation</h4>
+            <p class="more-features__list-item__desc">Check out our detailed online documentation and video tutorials to find out more about what you can do with Pearl.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-5 col-md-6">
+          <div class="more-features__list-item  w-100">
+            <i class="fas fa-globe-europe more-features__list-item__icon" style="color:#14b49f"></i>
+            <h4 class="more-features__list-item__heading">Multilingual & Translation Ready</h4>
+            <p class="more-features__list-item__desc">Pearl is 100% WPML compatible, so you can use the WPML plugin to translate your website into any language (WPML license not included).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="helpful-supporter text-center">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 mb-5">
+          <a href="#" class="helpful-supporter__infor">
+            <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/helpful_information/round-the-clock-support.jpg" alt="helpful-supporter__image">
+            <div class="helpful-supporter__infor-content w-100 h-100">
+              <i class="fas fa-phone helpful-supporter__infor-content__icon"></i>
+              <h2 class="helpful-supporter__infor-content__heading">24 hours supporter</h2>
+              <p class="helpful-supporter__infor-content__desc">
+                Our expert support team is always ready to help you get the most out of Pearl. You can use Live Chat or our Ticket system to resolve your issues.
               </p>
             </div>
-          </div>
-      </div>
-    </div>
-    <div class="Feature-list-boxes">
-      <div class="Feature-list">
-        <div class="item-box">
-          <div class="image-box first-box" data-tilt data-tilt-scale="1">
-            <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/magic-keyboard-with-mouse.jpg" alt="image-box" class="image-3D">
-            <div class="outer-image outer-image__one">
-              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/magic-keyboard-with-mouse-inner-one.png" alt="image-box">
-            </div>
-            <div class="outer-image outer-image__two">
-              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/magic-keyboard-with-mouse-inner-two.png" alt="image-box">
-            </div>
-          </div>
-          <div class="content-box">
-            <h2 class="title-box mb-5">
-              Pearl <span>Slider</span>
-            </h2>
-            <p class="desc-box mb-5">
-              Our easy-to-use Slider, coded on Angular JS, allows effortlessly creating and managing responsive slideshows with seamless transitions. You can customize width and height, instantly preview your slide changes, and activate an autoplay switcher.
-            </p>
-            <div class="button-box">
-              <button class="learn-more">learn more</button>
-              <button class="watch-video"><span>Watch video</span> <i class="far fa-play-circle"></i></button>
-            </div>
-          </div>
+          </a>
         </div>
-        <div class="item-box">
-          <div class="content-box">
-            <h2 class="title-box mb-5">
-              <span>Mega Menu</span> Options
-            </h2>
-            <p class="desc-box mb-5">
-              An outstanding solution for large and complex menus, giving your visitors an accessible and user-friendly experience. Set menus with 3 level dropdown, use up to 6 columns, add images, insert links and post titles and build any layout you can imagine.
-            </p>
-            <div class="button-box">
-              <button class="learn-more">learn more</button>
-              <button class="watch-video"><span>Watch video</span> <i class="far fa-play-circle"></i></button>
+        <div class="col-lg-4 col-md-4 mb-5">
+          <a href="#" class="helpful-supporter__infor">
+            <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/helpful_information/round-the-clock-support.jpg" alt="helpful-supporter__image">
+            <div class="helpful-supporter__infor-content w-100 h-100">
+              <span class="material-icons helpful-supporter__infor-content__icon">
+                movie_creation
+              </span>
+              <h2 class="helpful-supporter__infor-content__heading">Documentation</h2>
+              <p class="helpful-supporter__infor-content__desc">
+                Check out our detailed online documentation and useful video tutorials to find out more about what you can do with Pearl WP theme.
+              </p>
             </div>
-          </div>
-          <div class="image-box second-box" data-tilt data-tilt-scale="1">
-            <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/clay-ipad-pro.png" alt="image-box" class="image-3D">
-            <div class="outer-image outer-image__one">
-              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/clay-ipad-pro-inner-one.png" alt="image-box">
-            </div>
-          </div>
+          </a>
         </div>
-        <div class="item-box">
-          <div class="image-box third-box" data-tilt data-tilt-scale="1">
-            <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/shadow-layout.jpg" alt="image-box" class="image-3D">
-            <div class="outer-image outer-image__one">
-              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/shadow-layout-one.jpg" alt="image-box">
+        <div class="col-lg-4 col-md-4 ">
+          <a href="#" class="helpful-supporter__infor">
+            <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/helpful_information/round-the-clock-support.jpg" alt="helpful-supporter__image">
+            <div class="helpful-supporter__infor-content w-100 h-100">
+              <i class="fas fa-file helpful-supporter__infor-content__icon"></i>
+              <h2 class="helpful-supporter__infor-content__heading">Forum</h2>
+              <p class="helpful-supporter__infor-content__desc">
+                Join our community forum to discuss features, read great tips, reply to topics that interest you, and stay up to date with the latest from Pearl.
+              </p>
             </div>
-            <div class="outer-image outer-image__two">
-              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/shadow-layout-two.jpg" alt="image-box">
-            </div>
-          </div>
-          <div class="content-box">
-            <h2 class="title-box mb-5">
-              Multiple <span>Header Layouts</span>
-            </h2>
-            <p class="desc-box mb-5">
-              Our header builder allows you to compose a header that perfectly suits your needs. By using the intuitive drag and drop page elements, easily move the header modules to construct the flawless layout. Enjoy our pre-built library of header elements and create different header types for various devices.
-            </p>
-            <div class="button-box">
-              <button class="learn-more">learn more</button>
-              <button class="watch-video"><span>Watch video</span> <i class="far fa-play-circle"></i></button>
-            </div>
-          </div>
-        </div>
-        <div class="item-box">
-          <div class="content-box">
-            <h2 class="title-box mb-5">
-              <span>200+</span> UI modules
-            </h2>
-            <p class="desc-box mb-5">
-              Create anything you want with the powerful options available. From music player and contact forms to event list and post timeline. Our strong and versatile set of elements and theme customization options gives you the freedom and flexibility to build exceptional websites.
-            </p>
-            <div class="button-box">
-              <button class="learn-more">learn more</button>
-              <button class="watch-video"><span>Watch video</span> <i class="far fa-play-circle"></i></button>
-            </div>
-          </div>
-          <div class="image-box fourth-box" data-tilt data-tilt-scale="1">
-            <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-modules.png" alt="image-box" class="image-3D">
-            <div class="outer-image outer-image__one">
-              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-module-one.png" alt="image-box">
-            </div>
-            <div class="outer-image outer-image__two">
-              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-module-two.png" alt="image-box">
-            </div>
-            <div class="outer-image outer-image__three">
-              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-module-three.png" alt="image-box">
-            </div>
-            <div class="outer-image outer-image__four">
-              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-module-four.png" alt="image-box">
-            </div>
-            <div class="outer-image outer-image__five">
-              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-module-five.png" alt="image-box">
-            </div>
-            <div class="outer-image outer-image__six">
-              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-module-six.png" alt="image-box">
-            </div>
-          </div>
-        </div>
-        <div class="item-box">
-          <div class="image-box fifth-box" data-tilt data-tilt-scale="1">
-            <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-theme-options.jpg" alt="image-box" class="image-3D">
-            <div class="outer-image outer-image__one">
-              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-theme-options-one.png" alt="image-box">
-            </div>
-            <div class="outer-image outer-image__two">
-              <img src="https://pearl.stylemixthemes.com/landing/assets/images/home-page/features_list/pearl-theme-options-two.png" alt="image-box">
-            </div>
-          </div>
-          <div class="content-box">
-            <h2 class="title-box mb-5">
-              Pearl <span>Theme Options</span>
-            </h2>
-            <p class="desc-box mb-5">
-              Websites built with the Pearl Theme will never look the same. You can customize every detail all over the site thanks to advanced theme options. Create a quality design in minutes and apply it everywhere.
-            </p>
-            <div class="button-box">
-              <button class="learn-more">learn more</button>
-              <button class="watch-video"><span>Watch video</span> <i class="far fa-play-circle"></i></button>
-            </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="footer-infor text-center">
+        <h2 class="footer-infor__title">Get <span style="color:#da2c46;">Pearl</span> Today</h2>
+        <p class="footer-infor__content">Everything you need to create a website of your dream.</p>
+        <div class="footer-buttons">
+          <button class="footer-buttons__buy">just for $59</button>
+          <button class="footer-buttons__guild"><span>video guild</span><i class="far fa-play-circle"></i></button>
+        </div>
+      </div>
+      <div class="copyright">
+        Copyright © 2020 <span>Pearl</span> WordPress Theme by <span>StylemixThemes</span>
+      </div>
+    </div>
+    <div class="bgc__cover"></div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="https://unpkg.com/isotope-layout@3 /dist/isotope.pkgd.js"></script>
   <script src="vanilla-tilt.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

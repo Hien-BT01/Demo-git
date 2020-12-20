@@ -746,7 +746,7 @@ a{
                 transform: scaleY(1);
                 opacity: 1;
                 visibility: visible;
-                z-index: 100 !important;
+                z-index: 50 !important;
             }
             @media screen and (max-width:991px){
                 transform: scaleY(0);

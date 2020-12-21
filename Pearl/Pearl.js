@@ -93,6 +93,7 @@ $(document).ready(function(){
     });
     $(".menu-list__items").click(function(e){
         e.stopPropagation();
+        $(this).children().toggleClass("color-change");
         $(this).children(".menu-list__items-icon").toggleClass("updown");
         $(this).find(".subMenu-list").toggleClass("activeSub");
         $(this).find(".subMenu-short-list").toggleClass("activeSub");

@@ -273,6 +273,7 @@ a{
                             line-height: 2rem;
                             transition: all 0.3s linear;
                             &.updown{
+                                color: color_item(ryan);
                                 transform: rotate(-180deg);
                             }
                         }
@@ -327,6 +328,12 @@ a{
                 }
                 .menu-list{
                     display: block !important;
+                    &__items{
+                        .color-change{
+                            transition: all 0.3s linear;
+                            color: color_item(ryan) !important;
+                        }
+                    }
                 }
             }
         }

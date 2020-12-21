@@ -343,6 +343,7 @@ a {
     transition: all 0.3s linear;
   }
   .header-nav .container .navbar-item .menu-list__items .menu-list__items-icon.updown {
+    color: #11b0ae;
     transform: rotate(-180deg);
   }
 }
@@ -396,6 +397,10 @@ a {
   }
   .header-nav .container.nav__active .menu-list {
     display: block !important;
+  }
+  .header-nav .container.nav__active .menu-list__items .color-change {
+    transition: all 0.3s linear;
+    color: #11b0ae !important;
   }
 }
 .header-nav .container .dropdown-menu__button {

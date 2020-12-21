@@ -91,10 +91,11 @@ $(document).ready(function(){
             $(".header-nav .container").toggleClass("nav__active");
         }
     });
-    $(".menu-list__items-icon").click(function(e){
+    $(".menu-list__items").click(function(e){
         e.stopPropagation();
-        $(this).toggleClass("updown");
-        $(this).next().toggleClass("activeSub");
+        $(this).children(".menu-list__items-icon").toggleClass("updown");
+        $(this).find(".subMenu-list").toggleClass("activeSub");
+        $(this).find(".subMenu-short-list").toggleClass("activeSub");
     });
     VanillaTilt.init(document.querySelectorAll(".image-box"), {
         max: 30,

@@ -149,6 +149,11 @@ body {
   border-radius: 2rem;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 15%, transparent 50%, transparent 80%, rgba(255, 255, 255, 0.1) 100%);
 }
+@media screen and (max-width: 360px) {
+  .container .box-form {
+    max-width: 30rem;
+  }
+}
 .container input::placeholder {
   color: rgba(255, 255, 255, 0.8);
   font-size: 1.6rem;

@@ -148,6 +148,9 @@ body{
             background-image: linear-gradient(to bottom,rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.1) 15%,transparent 50%, transparent 80%,
             rgba(255,255,255,0.1) 100%);
         }
+        @media screen and (max-width:360px){
+            max-width: 30rem;
+        }
     }
     input::placeholder{
         color: rgba(255,255,255,0.8);

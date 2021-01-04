@@ -393,6 +393,28 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
 }
+@media screen and (max-width: 576px) {
+  .container .wrapper {
+    max-width: 35rem;
+  }
+}
+@media screen and (max-width: 424px) {
+  .container .wrapper {
+    max-width: 30rem;
+  }
+  .container .wrapper .form .sign-in__title {
+    font-size: 2.5rem;
+  }
+  .container .wrapper .form .sign-in .others .psw-forggoten, .container .wrapper .form .sign-in .others .new-account {
+    font-size: 1.1rem;
+  }
+  .container .wrapper .form .sign-in__button i {
+    font-size: 3rem;
+  }
+  .container .wrapper .form .sign-in__button span {
+    font-size: 1.4rem;
+  }
+}
 
 @keyframes ribble {
   from {

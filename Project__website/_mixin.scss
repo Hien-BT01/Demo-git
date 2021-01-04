@@ -1,0 +1,16 @@
+@mixin button(){
+    outline: none;
+    border: none;
+}
+@mixin abs-center() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+@mixin res-width($max-w,$max-h) {
+    width: 100%;
+    height: 100%;
+    max-width: $max-w;
+    max-height: $max-h;
+}

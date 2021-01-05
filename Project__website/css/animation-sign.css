@@ -1,0 +1,11 @@
+@keyframes ribble{
+    from{
+      width: 0;
+      height: 0;
+    }
+    to{
+      width: 50rem;
+      height: 50rem;
+      opacity: 0;
+    }
+}

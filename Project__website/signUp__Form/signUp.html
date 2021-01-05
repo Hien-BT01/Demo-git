@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signUp.css">
+    <link rel="stylesheet" href="../css/animation-sign.css">
+    <title>Sign up</title>
+    <script>
+        function buttonClick(element,event){
+            ribbleClick(element,event);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="form">
+                <div class="sign-up">
+                    <h2 class="form__title">Sign up</h2>
+                    <form action="../Login__Form/signIn.html">
+                        <div class="sign-up__box">
+                            <input type="password" class="sign-up__box__input" required>
+                            <label class="sign-up__box__text" >Name company</label>
+                        </div>
+                        <div class="sign-up__box">
+                            <input type="password" class="sign-up__box__input" required>
+                            <label class="sign-up__box__text" >First name</label>
+                        </div>
+                        <div class="sign-up__box">
+                            <input type="password" class="sign-up__box__input" required>
+                            <label class="sign-up__box__text" >Last name</label>
+                        </div>
+                        <div class="sign-up__box">
+                            <input type="text" class="sign-up__box__input" required>
+                            <label class="sign-up__box__text">Email</label>
+                        </div>
+                        <div class="sign-up__box">
+                            <input type="password" class="sign-up__box__input" required>
+                            <label class="sign-up__box__text" >Password</label>
+                        </div>
+                        <div class="sign-up__box">
+                            <input type="password" class="sign-up__box__input" required>
+                            <label class="sign-up__box__text" >Confirm password</label>
+                        </div>
+                        <div class="sign-up__button">
+                            <button onclick="buttonClick(this,event)">Sign me up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/sign.js"></script>
+</body>
+</html>

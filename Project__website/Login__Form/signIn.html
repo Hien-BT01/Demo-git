@@ -9,7 +9,13 @@
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../css/animation-sign.css">
     <link rel="stylesheet" href="signIn.css">
+    <script>
+        function effectClick(buttonE,e){
+            ribbleClick(buttonE,e);
+        }
+    </script>
     <title>Sign in</title>
 </head>
 <body>
@@ -17,7 +23,7 @@
         <div class="wrapper">
             <div class="form">
                 <div class="sign-in sign-in__with--created">
-                    <h2 class="sign-in__title">Sign in with</h2>
+                    <h2 class="form__title">Sign in with</h2>
                     <form>
                         <div class="sign-in__box">
                             <input type="text" class="sign-in__box__input" required>
@@ -32,9 +38,9 @@
                             <label class="Remember-check" for="check">Remember Me</label>
                         </div>
                         <div class="sign-in__box">
-                            <button class="submit">Get started</button>
+                            <button class="submit" onclick="effectClick(this,event)">Get started</button>
                         </div>
-                    </form>
+                    </form> 
                     <div class="others">
                         <a href="#" class="psw-forggoten"><span>Forget password?</span></a>
                         <span class="slash">/</span>
@@ -57,6 +63,6 @@
             </div>
         </div>
     </div>
-    <script src="signIn.js"></script>
+    <script src="../js/sign.js"></script>
 </body>
 </html>

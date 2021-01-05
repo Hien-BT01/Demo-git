@@ -2,6 +2,9 @@
     outline: none;
     border: none;
 }
+@mixin container-bgc($url) {
+    background: $url center no-repeat;
+}
 @mixin abs-center() {
     position: absolute;
     left: 50%;

@@ -1,0 +1,264 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "OpenSans", sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: url("../signUp__Form/beautiful-background-of-lines-with-gradients-vector.jpg") center no-repeat;
+}
+.container .wrapper {
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 2rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 40rem;
+  max-height: 50rem;
+  margin: auto;
+  padding: 4rem 4rem;
+  background-image: linear-gradient(66.19deg, rgba(48, 37, 37, 0.1568) 9.36%, rgba(111, 81, 81, 0.1204) 46.36%, rgba(154, 128, 128, 0.2156) 94.32%);
+  border: 1px solid rgba(226, 223, 223, 0.99);
+  transition: all 0.3s linear;
+}
+.container .wrapper .form {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fefefe;
+}
+.container .wrapper .form__title {
+  text-align: center;
+  font-size: 4rem;
+  line-height: 5.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.container .wrapper .form .sign-up {
+  width: 100%;
+}
+.container .wrapper .form .sign-up__box {
+  text-align: left;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.container .wrapper .form .sign-up__box__input {
+  outline: none;
+  border: none;
+  color: #fefefe;
+  padding: 1rem 0 0.5rem;
+  background: transparent;
+  border-bottom: 1px solid #fefefe;
+  width: 100%;
+  font-size: 1.6rem;
+}
+.container .wrapper .form .sign-up__box__input:focus ~ label, .container .wrapper .form .sign-up__box__input:valid ~ label {
+  top: -1.8rem;
+  left: 0;
+  font-size: 1.2rem;
+}
+.container .wrapper .form .sign-up__box__text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1rem 0 0.5rem;
+  font-size: 1.6rem;
+  pointer-events: none;
+  transition: all 0.3s linear;
+}
+.container .wrapper .form .sign-up__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+  width: 100%;
+}
+.container .wrapper .form .sign-up__button button {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  color: #fefefe;
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  width: 100%;
+  border-radius: 1.2rem;
+  outline: none;
+  border: none;
+  font-size: 2.4rem;
+  background-image: linear-gradient(270deg, #4AA8A2 0%, #3191A2 31.56%, #327CA5 100%);
+  background-size: 200% auto;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 0 0.5rem rgba(154, 128, 128, 0.2156);
+}
+.container .wrapper .form .sign-up__button button:hover {
+  background-position: 300%;
+}
+.container .wrapper .form .sign-up__button button .effect-click {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: ribble 0.5s linear forwards;
+  background: rgba(48, 60, 65, 0.3);
+}
+@media screen and (max-width: 424px) {
+  .container .wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 30rem;
+    max-height: 50rem;
+  }
+  .container .wrapper .form .sign-up__button {
+    font-size: 1.8rem;
+  }
+}
+
+/*# sourceMappingURL=signUp.css.map */

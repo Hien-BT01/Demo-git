@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food app</title>
+    <link rel="stylesheet" href="f_app.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="meal-wrapper">
+        <div class="meal-search">
+          <h2 class="title">Find meals for your ingedients</h2>
+          <blockquote>
+            real food doesn't have ingredient, real food is ingredient
+            <br />
+            <cite>-Jamie Oliver</cite>
+          </blockquote>
+          <div class="meal-search__box">
+            <input
+              type="text"
+              class="meal-search__content"
+              placeholder="Enter an ingedients"
+              id="search-inputs"
+            />
+            <button type="submit" class="search-btn btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="meal-result">
+          <h2 class="title">Your search results:</h2>
+          <div class="meals" id="meal">
+            <!-- <div class="meal__item">
+              <div class="meal__img">
+                <img
+                  src="https://static.toiimg.com/thumb/54659021.cms?width=1200&height=900"
+                  alt="food-img"
+                  class="meal__img-potato"
+                />
+              </div>
+              <div class="meal__name">
+                <h3>Potato Chips</h3>
+                <a href="#" class="recipe-btn">Get Recipe</a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="menu-detail">
+          <button type="button" class="menu-detail__button--close">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="menu-detail__content"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="f_app.js"></script>
+  </body>
+</html>

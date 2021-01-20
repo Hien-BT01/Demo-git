@@ -31,16 +31,19 @@ let weather = {
         const bodyElement = document.querySelector("body");
         bodyElement.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')"
     },
+    search:function(){
+        this.fetchWeather(document.querySelector(".search-bar").value);
+    }
 }
 
 const buttonElement = document.querySelector("button");
 const inputElement = document.querySelector(".search-bar");
 buttonElement.addEventListener("click", (e) => {
-    weather.fetchWeather(inputElement.value);
+    weather.search();
 })
 
 inputElement.addEventListener("keyup",function(e){
     if(e.key === "Enter"){
-        weather.fetchWeather(inputElement.value)
+        weather.search();
     }
 })

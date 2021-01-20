@@ -1,18 +1,24 @@
 let mealList = document.querySelector("#meal");
 let menuDetailContent = document.querySelector(".menu-detail__content");
 $(document).ready(function () {
-  $(".search-btn").click(function () {
+  $(".search-btn").click(showItem);
+  $(".meal-search__content").keyup(e => {
+    if(e.key === "Enter"){
+      showItem();
+    }
+  })
+  function showItem() {
     let seacrhInputText = document.querySelector("#search-inputs").value.trim();
     fetch(
       `https://www.themealdb.com/api/json/v1/1/filter.php?i=${seacrhInputText}`
     )
       .then((response) => response.json())
-       .then((data) => {
-         console.log(data)
-          let htmlElement = "";
-            if (data.meals) {
-              data.meals.forEach((meal) => {
-                htmlElement += `
+      .then((data) => {
+        console.log(data);
+        let htmlElement = "";
+        if (data.meals) {
+          data.meals.forEach((meal) => {
+            htmlElement += `
                                 <div class="meals__item" data-id="${meal.idMeal}">
                                     <div class="meals__img">
                                         <img
@@ -27,15 +33,15 @@ $(document).ready(function () {
                                     </div>
                             </div>
                         `;
-              });
-              mealList.classList.remove("not-found");
-            } else {
-              htmlElement = `Sorry we dont have that meal!`;
-              mealList.classList.add("not-found");
-            }
-            mealList.innerHTML = htmlElement;
-       }) 
-  });
+          });
+          mealList.classList.remove("not-found");
+        } else {
+          htmlElement = `Sorry we dont have that meal!`;
+          mealList.classList.add("not-found");
+        }
+        mealList.innerHTML = htmlElement;
+    });
+  }
   $(".meals").click((e) => {
     e.preventDefault();
     if (e.target.classList.contains("recipe-btn")) {
@@ -49,7 +55,7 @@ $(document).ready(function () {
   });
   function mealRecipeModal(meal) {
     meal = meal[0];
-    console.log(meal)
+    console.log(meal);
     let htmlE = `
       <h2 class="menu-detail__title">${meal.strMeal}</h2>
       <p class="menu-detail__category">${meal.strCategory}</p>
@@ -70,11 +76,7 @@ $(document).ready(function () {
       </div>
     `;
     menuDetailContent.innerHTML = htmlE;
-    $(".menu-detail__content")
-      .parent()
-      .hide(0)
-      .show(0)
-      .addClass("show-recipe");
+    $(".menu-detail__content").parent().hide(0).show(0).addClass("show-recipe");
   }
   $(".menu-detail__button--close").click(function (e) {
     $(".menu-detail").fadeOut(500, () => {

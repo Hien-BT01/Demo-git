@@ -21,7 +21,7 @@ let weather = {
                 <h2 class="weather__city">Weather in ${name}</h2>
                 <p class="weather__temperature">${temp}°C</p>
                 <div class="weather__status">
-                    <img src="https://openweathermap.org/img/wn/${icon}.png" alt="weather__icon" class="weather__icon">
+                    <img src="http://openweathermap.org/img/wn/${icon}.png" alt="weather__icon" class="weather__icon">
                     <span class="weather__infor">${description}</span>
                 </div>
                 <p class="moistness">humidity: ${humidity}6%</p>

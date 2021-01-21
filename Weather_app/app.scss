@@ -12,7 +12,6 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0 auto;
     background:#222 url("https://source.unsplash.com/1600x900/?nature,water") center no-repeat;
     background-size: cover;
 }
@@ -23,6 +22,7 @@ body{
     max-width: 42rem;
     width: 100%;
     color: #fefefe;
+    min-width: 28rem;
     .search{
         display: flex;
         margin-bottom: 2rem;
@@ -32,7 +32,8 @@ body{
             outline: none;
             border-radius: 2.4rem;
             margin-right: 1.2rem;
-            flex:1;
+            //
+            width: 100%;
             background-color: rgba(35, 33, 33, 0.712);
             color: #fefefe;
             font-size: 120%;
@@ -92,5 +93,7 @@ body{
             text-transform: capitalize;
         }
     }
-
+    @media screen and(max-width:576px){
+        max-width: 30rem;
+    }
 }

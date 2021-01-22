@@ -40,7 +40,7 @@ body {
   width: 100%;
   background-color: rgba(35, 33, 33, 0.712);
   color: #fefefe;
-  font-size: 120%;
+  font-size: 200%;
   text-transform: capitalize;
 }
 .card .search-bar::placeholder {

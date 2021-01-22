@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Gradients</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css" />
+    <style>
+        .box {
+            min-height: 200px;
+            border: 1px solid #333;
+            margin: 1rem;
+        }
+
+        section:nth-of-type(1) .box {
+            background: linear-gradient(red 10%, 30%, blue 90%);
+        }
+
+        section:nth-of-type(2) .box {
+            /* shape - circle ellipse */
+            background: radial-gradient(circle farthest-corner at 20% 50%, yellow, cornflowerblue, green, purple);
+        }
+
+        section:nth-of-type(3) .box {
+            background:
+                repeating-linear-gradient(45deg, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5) 10px, transparent 10px, transparent 30px),
+                repeating-linear-gradient(-45deg, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5) 10px, white 10px, white 30px);
+        }
+
+        section:nth-of-type(4) .box {
+            background: hsl(240, 30%, 80%) repeating-radial-gradient(circle, black, black 20px, transparent 20px, transparent 30px);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSS Gradients</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Linear-Gradient</h2>
+            <div class="box"></div>
+        </section>
+        <section>
+            <h2>Radial-Gradient</h2>
+            <div class="box"></div>
+        </section>
+        <section>
+            <h2>Repeating-Linear-Gradient</h2>
+            <div class="box"></div>
+        </section>
+        <section>
+            <h2>Repeating-Radial-Gradient</h2>
+            <div class="box"></div>
+        </section>
+    </main>
+</body>
+
+</html>

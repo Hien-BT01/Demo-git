@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #121213;
+        }
+        .loader,h2{
+            position: relative;
+            -webkit-box-reflect:below 1px linear-gradient(transparent,#0002);
+        }
+        .loader::before{
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            top: 0;
+            right: 0;
+            background-color: #03e9f4;
+            animation: blinkCursor 0.5s linear infinite forwards;
+        }
+        h2{
+            color: #03e9f4;
+            text-transform: uppercase;
+            font-size: 4em;
+            letter-spacing: 5px;
+            animation: typing 8s steps(10,end) infinite;
+            overflow: hidden;
+        }
+        h2:nth-child(2){
+            color: #03e9f4;
+            text-transform: uppercase;
+            font-size: 4em;
+            letter-spacing: 5px;
+            animation: typing 8s steps(10,start) infinite;
+            overflow: hidden;
+        }
+        
+        @keyframes blinkCursor{
+            0%,75%{
+                opacity: 1;
+            }
+            76%,100%{
+                opacity: 0;
+            }
+        }
+        @keyframes typing{
+            0%,90%{
+                width: 0;
+            }
+            45%{
+                width: 403.81px;
+            }
+            100%{
+                width: 0;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <h2>Loading...</h2>
+        <h2>Loading...</h2>
+    </div>
+</body>
+</html>

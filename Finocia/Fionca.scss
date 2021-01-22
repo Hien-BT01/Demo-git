@@ -1,492 +1,521 @@
-$light__red:#da2c46;
-$background-linear__nav:linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-$white-item:#fff;
-$align-center:center;
-@import './_mixin_Fionca';
-html{
-    scroll-behavior: smooth;
+$light__red: #da2c46;
+$background-linear__nav: linear-gradient(
+  to right,
+  #b8cbb8 0%,
+  #b8cbb8 0%,
+  #b465da 0%,
+  #cf6cc9 33%,
+  #ee609c 66%,
+  #ee609c 100%
+);
+$white-item: #fff;
+$align-center: center;
+@import "./_mixin_Fionca";
+@use "sass:color";
+html {
+  scroll-behavior: smooth;
 }
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.afterLoading {
+  max-height: 0;
+  overflow: hidden;
+}
+.loading {
+  position: relative;
+  height: 120vh;
+  @include bgcItem(
+    linear-gradient(to top, #bdc2e8 1%, #bdc2e8 1%, #e6dee9 100%)
+  );
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .name__page {
+    margin-top: 5rem;
+    letter-spacing: 3rem;
+    font-size: 6rem;
+    color: $light__red;
+  }
+  &__waiting {
+    width: 13rem;
+    height: 13rem;
     box-sizing: border-box;
+    border-radius: 50%;
+    border-top: 10px solid #e74c3c;
+    position: relative;
+    animation: loading 2s linear forwards;
+    &::before,
+    &::after {
+      content: "";
+      width: 13rem;
+      height: 13rem;
+      position: absolute;
+      left: 0;
+      top: -10px;
+      box-sizing: border-box;
+      border-radius: 50%;
+    }
+    &:after {
+      border-top: 10px solid #e67e22;
+      transform: rotate(120deg);
+    }
+    &::before {
+      border-top: 10px solid #3498db;
+      transform: rotate(240deg);
+    }
+  }
 }
-.afterLoading{
-    max-height: 0;
-    overflow: hidden;
-}
-.loading{
-    position: relative; 
-    height: 120vh;
-    @include bgcItem(linear-gradient(to top, #bdc2e8 1%, #bdc2e8 1%, #e6dee9 100%));
-    z-index: 99;
+.nav-items {
+  position: relative;
+  padding: 0 3rem;
+  @include bgcItem(
+    linear-gradient(to top, #bdc2e8 1%, #bdc2e8 1%, #e6dee9 100%)
+  );
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.5), 0 0 2.4rem rgba(0, 0, 0, 0.3);
+  max-height: 25vh;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  .logo {
+    padding: 1.5rem 0;
+    position: relative;
+    width: 10%;
+    &-image {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media screen and (max-width: 575px) {
+      display: none;
+    }
+  }
+  &__menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    .name__page{
-        margin-top: 5rem;
-        letter-spacing:3rem;
-        font-size: 6rem;
-        color:$light__red;
+    &__item {
+      @include fontText("Krona One");
+      line-height: 2rem;
+      margin-bottom: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.5s;
+      color: rgba(0, 0, 0, 0.5);
+      &:hover {
+        text-decoration: none;
+        color: $light__red;
+      }
     }
-    &__waiting{
-        width: 13rem;
-        height: 13rem;
-        box-sizing: border-box;
-        border-radius: 50%;
-        border-top: 10px solid #e74c3c;
-        position: relative;
-        animation: loading 2s linear forwards;
-        &::before,&::after{
-            content: '';
-            width: 13rem;
-            height: 13rem;
-            position: absolute;
-            left: 0;
-            top: -10px;
-            box-sizing: border-box;
-            border-radius: 50%;
-        }
-        &:after{
-            border-top: 10px solid #e67e22;
-            transform: rotate(120deg);    
-        }
-        &::before{
-            border-top: 10px solid #3498db;
-            transform: rotate(240deg);
-        }
-    }
-}
-.nav-items{
+  }
+  &__button {
     position: relative;
-    padding: 0 3rem;
-    @include bgcItem(linear-gradient(to top, #bdc2e8 1%, #bdc2e8 1%, #e6dee9 100%));
-    box-shadow: 0 0 1.2rem rgba(0,0,0,0.5),0 0 2.4rem rgba(0,0,0,0.3);
-    max-height: 25vh;
-    position: fixed;
+    display: block;
+    padding: 12px 2.5rem;
+    border: none;
+    outline: none;
+    background: $light__red;
+    font-size: 18px;
+    color: $white-item;
+    font-weight: 700;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border-top-left-radius: 30px;
+    overflow: hidden;
+    z-index: 2;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      background: #202e45;
+      transition: all 0.5s linear;
+      transform: translateX(-20%);
+      opacity: 0;
+      z-index: -1;
+    }
+    &:hover::before {
+      opacity: 1;
+      transform: none;
+    }
+    @media screen and (max-width: 575px) {
+      font-size: 1rem;
+      padding: 1rem 2.5rem;
+    }
+  }
+}
+.banner__section {
+  text-align: $align-center;
+  padding: 7rem 6rem;
+  font-family: "Poppins", "Roboto", "sans-serif";
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  &-title {
+    transform: translateY(30%);
+    font-size: 3.875rem;
+    font-weight: 700;
+    color: $white-item;
+    span {
+      color: $light__red;
+    }
+  }
+  @media screen and (max-width: 482px) {
+    padding: 3rem 2rem;
+    &-title {
+      font-size: 2rem;
+      text-align: left;
+    }
+  }
+}
+.card-flip {
+  min-height: 80vh;
+}
+.menu-demo {
+  padding: 6rem 5rem;
+  @include titleItem(relative, center);
+  @include bgcItem(
+    linear-gradient(to top, #bdc2e8 1%, #bdc2e8 1%, #e6dee9 100%)
+  );
+  text-transform: capitalize;
+  &__title {
+    position: relative;
+    color: #454545;
+  }
+  &__heading {
+    @include fontText("Krona One");
+    color: #454545;
+    font-size: 2rem;
+    font-weight: 500;
+    position: relative;
+    span {
+      color: $light__red;
+    }
+  }
+  &__content {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .animation_flip {
+    cursor: pointer;
+  }
+  .flipped {
+    transform: rotateY(180deg);
+  }
+  &__list__items {
+    .card-flip:nth-of-type(1) {
+      .card-front {
+        @include front_site(linear-gradient(120deg, #fccb90 0%, #d57eeb 100%));
+        &-text {
+          @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
+          @include fontweightText(700);
+          @include fontText("Staatliches");
+        }
+      }
+    }
+    .card-flip:nth-of-type(2) {
+      .card-front {
+        @include front_site(linear-gradient(to right, #232526, #414345));
+        &-text {
+          @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
+          @include fontweightText(700);
+          @include fontText("Staatliches");
+        }
+      }
+    }
+    .card-flip:nth-of-type(3) {
+      .card-front {
+        @include front_site(linear-gradient(to right, #dae2f8, #d6a4a4));
+        &-text {
+          @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
+          @include fontweightText(700);
+          @include fontText("Staatliches");
+        }
+      }
+    }
+    .card-flip:nth-of-type(4) {
+      .card-front {
+        @include front_site(linear-gradient(to top, #5f72bd 0%, #9b23ea 100%));
+        &-text {
+          @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
+          @include fontweightText(700);
+          @include fontText("Staatliches");
+        }
+      }
+    }
+    .card-flip:nth-of-type(5) {
+      .card-front {
+        @include front_site(
+          linear-gradient(-225deg, #69eacb 0%, #eaccf8 48%, #6654f1 100%)
+        );
+        &-text {
+          @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
+          @include fontweightText(700);
+          @include fontText("Staatliches");
+        }
+      }
+    }
+    .card-flip:nth-of-type(6) {
+      .card-front {
+        @include front_site(linear-gradient(to right, #e55d87, #5fc3e4));
+        &-text {
+          @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
+          @include fontweightText(700);
+          @include fontText("Staatliches");
+        }
+      }
+    }
+    .card-flip:nth-of-type(7) {
+      .card-front {
+        @include front_site(linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%));
+        &-text {
+          @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
+          @include fontweightText(700);
+          @include fontText("Staatliches");
+        }
+      }
+    }
+    .card-flip:nth-of-type(8) {
+      .card-front {
+        @include front_site(linear-gradient(to top, #eef2f3 0%, #9b23ea 100%));
+        &-text {
+          @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
+          @include fontweightText(700);
+          @include fontText("Staatliches");
+        }
+      }
+    }
+    .card-flip:nth-of-type(9) {
+      .card-front {
+        @include front_site(
+          linear-gradient(to right, #0052d4, #4364f7, #6fb1fc)
+        );
+        &-text {
+          @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
+          @include fontweightText(700);
+          @include fontText("Staatliches");
+        }
+      }
+    }
+  }
+  &__item {
+    height: 100%;
     width: 100%;
-    z-index: 10;
-    .logo{
-        padding: 1.5rem 0;
-        position: relative;
-        width: 10%;
-        &-image{
-            display:inline-block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        @media screen and (max-width:575px) {
-            display: none;
-        }
+    transform-style: preserve-3d;
+    transition: all 0.8s ease-in-out;
+    .card-front,
+    .card-back {
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      transition: all 0.8s ease-in-out;
+      overflow: hidden;
     }
-    &__menu{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        &__item{
-            @include fontText('Krona One');
-            line-height: 2rem;
-            margin-bottom: 0;
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.5s;
-            color: rgba(0,0,0,0.5);
-            &:hover{
-                text-decoration: none;
-                color:$light__red;
-            }
-        }
-    }
-    &__button{
-        position: relative;
-        display: block;
-        padding: 12px 2.5rem;
-        border:none;
-        outline: none;
-        background:$light__red;
-        font-size: 18px;
-        color:$white-item;
-        font-weight: 700;
-        border-top-right-radius:24px;
-        border-bottom-right-radius: 24px;
-        border-top-left-radius: 30px;
-        overflow: hidden;
-        z-index: 2;
-        &::before{
-            content: '';
-            position: absolute;
-            right:0;
-            left:0;
-            bottom: 0;
-            top: 0;
-            background: #202e45;
-            transition: all 0.5s linear;
-            transform: translateX(-20%);
-            opacity: 0;
-            z-index: -1;
-        }
-        &:hover::before{
-            opacity: 1;
-            transform: none;
-        }
-        @media screen and (max-width:575px){
-            font-size: 1rem;
-            padding: 1rem 2.5rem;
-        }
-    }
-}
-.banner__section{
-    text-align: $align-center;
-    padding: 7rem 6rem;
-    font-family:'Poppins','Roboto','sans-serif';
-    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-    &-title{
-        transform: translateY(30%);
-        font-size: 3.875rem;
-        font-weight: 700;
-        color:$white-item;
-        span{
-            color:$light__red;
-        }
-    }
-    @media screen and (max-width: 482px) {
-        padding: 3rem 2rem;
-        &-title{
-            font-size: 2rem;
-            text-align: left;
-        }
-    }
-}
-.card-flip{
-    min-height: 80vh;
-}
-.menu-demo{
-    padding: 6rem 5rem;
-    @include titleItem(relative,center);
-    @include bgcItem(linear-gradient(to top, #bdc2e8 1%, #bdc2e8 1%, #e6dee9 100%));
-    text-transform: capitalize;
-    &__title{
-        position: relative;
-        color:#454545;
-    }
-    &__heading{
-        @include fontText('Krona One');
-        color:#454545;  
+    .card-front {
+      &-text {
+        color: $white-item;
         font-size: 2rem;
-        font-weight: 500;
-        position: relative;
-        span{
-            color:$light__red;
-        }
+      }
     }
-    &__content{
-        font-weight: 500;
-        font-size: 18px;
+    .card-back {
+      transform: rotateY(180deg);
     }
-    .animation_flip{
-        cursor: pointer;
+    &__image {
+      height: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+      width: 100%;
+      transition: all 500ms ease;
     }
-    .flipped{
-        transform: rotateY(180deg);
+    &__link {
+      height: 100%;
+      width: 100%;
+      .image-random {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
     }
-    &__list__items{
-        .card-flip:nth-of-type(1){
-            .card-front{
-                @include front_site(linear-gradient(120deg, #fccb90 0%, #d57eeb 100%));
-                &-text{
-                    @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
-                    @include fontweightText(700);
-                    @include fontText('Staatliches');
-                }
-            }
-        }
-        .card-flip:nth-of-type(2){
-            .card-front{
-                @include front_site(linear-gradient(to right, #232526, #414345));
-                &-text{
-                    @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
-                    @include fontweightText(700);
-                    @include fontText('Staatliches');
-                }
-            }
-        }
-        .card-flip:nth-of-type(3){
-            .card-front{
-                @include front_site(linear-gradient(to right, #dae2f8, #d6a4a4));
-                &-text{
-                    @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
-                    @include fontweightText(700);
-                    @include fontText('Staatliches');
-                }
-            }
-        }
-        .card-flip:nth-of-type(4){
-            .card-front{
-                @include front_site(linear-gradient(to top, #5f72bd 0%, #9b23ea 100%));
-                &-text{
-                    @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
-                    @include fontweightText(700);
-                    @include fontText('Staatliches');
-                }
-            }
-        }
-        .card-flip:nth-of-type(5){
-            .card-front{
-                @include front_site(linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%));
-                &-text{
-                    @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
-                    @include fontweightText(700);
-                    @include fontText('Staatliches');
-                }
-            }
-        }
-        .card-flip:nth-of-type(6){
-            .card-front{
-                @include front_site(linear-gradient(to right, #e55d87, #5fc3e4));
-                &-text{
-                    @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
-                    @include fontweightText(700);
-                    @include fontText('Staatliches');
-                }
-            }
-        }
-        .card-flip:nth-of-type(7){
-            .card-front{
-                @include front_site(linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%));
-                &-text{
-                    @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
-                    @include fontweightText(700);
-                    @include fontText('Staatliches');
-                }
-            }
-        }
-        .card-flip:nth-of-type(8){
-            .card-front{
-                @include front_site(linear-gradient(to top,#eef2f3 0%, #9b23ea 100%));
-                &-text{
-                    @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
-                    @include fontweightText(700);
-                    @include fontText('Staatliches');
-                }
-            }
-        }
-        .card-flip:nth-of-type(9){
-            .card-front{
-                @include front_site(linear-gradient(to right, #0052d4, #4364f7, #6fb1fc));
-                &-text{
-                    @include textGradient(linear-gradient(to right, #e53935, #e35d5b));
-                    @include fontweightText(700);
-                    @include fontText('Staatliches');
-                }
-            }
-        }
+    &:hover {
+      transform: translateY(-10px);
     }
-    &__item{
+    &:hover &__content {
+      color: $light__red;
+    }
+    &.flipped {
+      transform: rotateY(180deg);
+    }
+  }
+}
+.feature {
+  @include titleItem(relative, center);
+  @include bgcItem(
+    linear-gradient(to top, #bdc2e8 100%, #bdc2e8 1%, #e6dee9 1%)
+  );
+  text-transform: capitalize;
+  padding: 0 4rem 4rem 4rem;
+  &__title {
+    position: relative;
+  }
+  &__heading {
+    @include fontText("Krona One");
+    @include textColor(#454545);
+    font-size: 2rem;
+    @include fontweightText(500);
+    span {
+      @include textColor($light__red);
+    }
+  }
+  &__list-desc {
+    font-weight: 500;
+    font-size: 18px;
+    @include textColor(rgba(0, 0, 0, 0.5));
+  }
+  .flow-up {
+    animation: flowUp 0.5s linear forwards;
+  }
+  &__item {
+    padding: 30px 12px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    &__content {
+      .brand-logo {
         height: 100%;
         width: 100%;
-        transform-style: preserve-3d;
-        transition: all 0.8s ease-in-out;
-        .card-front,.card-back{
-            box-shadow: 0 0 2rem rgba(0,0,0,.5);
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            border-radius: 10px;
-            transition: all 0.8s ease-in-out;
-            overflow: hidden;
-        }
-        .card-front{
-            &-text{
-                color: $white-item;
-                font-size: 2rem;
-            }
-        }
-        .card-back{
-            transform: rotateY(180deg);
-        }
-        &__image{
-            height: 100%;
-            overflow: hidden;
-            border-radius: 10px;
-            width: 100%;
-            transition: all 500ms ease;
-        }
-        &__link{
-            height: 100%;
-            width: 100%;
-            .image-random{
-                width: 100%;
-                height: 100%;
-                display: block;
-                object-fit: cover;      
-            }
-        }
-        &:hover{
-            transform: translateY(-10px);
-        }
-        &:hover &__content{
-            color:$light__red;
-        }
-        &.flipped{
-            transform: rotateY(180deg);
-        }
-    }
-}
-.feature{
-    @include titleItem(relative,center);
-    @include bgcItem(linear-gradient(to top, #bdc2e8 100%, #bdc2e8 1%, #e6dee9 1%));
-    text-transform: capitalize;
-    padding: 0 4rem 4rem 4rem;
-    &__title{
-        position: relative;
-    }
-    &__heading{
-        @include fontText('Krona One');
-        @include textColor(#454545);
-        font-size: 2rem;
+      }
+      &-heading {
+        line-height: 30px;
+        font-size: 1.2rem;
+        @include fontText("Krona One");
+        @include fontweightText(700);
+        text-transform: capitalize;
+        @include textGradient(
+          linear-gradient(to top, #5ee7df 0%, #b490ca 100%)
+        );
+      }
+      &-desc {
         @include fontweightText(500);
-        span{
-            @include textColor($light__red);
-        }
+        font-size: 14px;
+        line-height: 30px;
+      }
     }
-    &__list-desc{
-        font-weight: 500;
-        font-size: 18px;
-        @include textColor(rgba(0,0,0,0.5));
+    &__content-image {
+      max-width: 40%;
+      object-fit: cover;
     }
-    .flow-up{
-        animation: flowUp 0.5s linear forwards;
-    }
-    &__item{
-        padding: 30px 12px;
-        transition: all 0.5s ease-in-out;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5), 0 0 20px rgba(0,0,0,0.5);
-        cursor: pointer;
-        &__content{
-           .brand-logo{
-               height: 100%;
-               width: 100%;
-           }
-           &-heading{
-               line-height: 30px;
-               font-size: 1.2rem;
-               @include fontText('Krona One');
-               @include fontweightText(700);
-               text-transform: capitalize;
-               @include textGradient(linear-gradient(to top, #5ee7df 0%, #b490ca 100%));
-           }
-           &-desc{
-               @include fontweightText(500);
-               font-size: 14px;
-               line-height: 30px; 
-           }
-        }
-        &__content-image{
-            max-width: 40%;
-            object-fit: cover;
-        }
-    }
+  }
 }
-.footer{
-    padding: 16rem 0;
-    @include titleItem(relative,center);
-    background-image:url(./business-people-office.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    &__box-content{
-        color:$white-item;
-        margin: 0 auto;
-        z-index: 2;
-        &__title{
-            @include fontText('Yeseva One');
-            line-height: 3rem;
-            span{
-                color:$light__red;
-            }
-        }
-        &__button{
-            display: inline-block;
-            position: relative;
-            outline: none;
-            padding: 12px 3.5rem;
-            border-radius: 0.8rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-            overflow: hidden;
-            z-index: 2;
-            transition: all 0.5s linear;
-            @include textColor($light__red);
-            &::before{
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 0;
-                left: 0;
-                bottom: 0;
-                background: $light__red;
-                transition: all 0.5s ease-in-out;
-                transform: translateX(-20%);
-                opacity: 0;
-                z-index: -1;
-            }
-            &:hover::before{
-                transform: none;
-                opacity: 1;
-            }
-            &:hover{
-                color: $white-item;
-            }
-        }
+.footer {
+  padding: 16rem 0;
+  @include titleItem(relative, center);
+  background-image: url(./business-people-office.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__box-content {
+    color: $white-item;
+    margin: 0 auto;
+    z-index: 2;
+    &__title {
+      @include fontText("Yeseva One");
+      line-height: 3rem;
+      span {
+        color: $light__red;
+      }
     }
-    &__bgc{
-        @include abs__bgc();
-    }
-}
-.button__scroll-top{
-    position: fixed;
-    right: 1.125rem;
-    bottom: 100%;
-    background: $white-item;
-    color:#000;
-    outline: none;
-    border: none;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    animation: pulse 2s linear infinite;
-    i{
-        &:after{
-            position: absolute;
-            z-index: -1;
-            content: '';
-            top: 100%;
-            left: 5%;
-            height: 10px;
-            width: 90%;
-            opacity: 1;
-            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
-        }
-    }
-    &:before{
+    &__button {
+      display: inline-block;
+      position: relative;
+      outline: none;
+      padding: 12px 3.5rem;
+      border-radius: 0.8rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      overflow: hidden;
+      z-index: 2;
+      transition: all 0.5s linear;
+      @include textColor($light__red);
+      &::before {
+        content: "";
         position: absolute;
-        content: '';
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: $light__red;
+        transition: all 0.5s ease-in-out;
+        transform: translateX(-20%);
+        opacity: 0;
+        z-index: -1;
+      }
+      &:hover::before {
+        transform: none;
+        opacity: 1;
+      }
+      &:hover {
+        color: $white-item;
+      }
     }
-    &:hover{
-        background:$light__red;
-        color:$white-item;
-    }
+  }
+  &__bgc {
+    @include abs__bgc();
+  }
 }
-.scroll_toTop{
-    bottom: 5% !important;
-    transition: all 1s linear;
+.button__scroll-top {
+  position: fixed;
+  right: 1.125rem;
+  bottom: 100%;
+  background: $white-item;
+  color: #000;
+  outline: none;
+  border: none;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  animation: pulse 2s linear infinite;
+  i {
+    &:after {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      top: 100%;
+      left: 5%;
+      height: 10px;
+      width: 90%;
+      opacity: 1;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.25) 0%,
+        rgba(0, 0, 0, 0) 80%
+      );
+    }
+  }
+  &:before {
+    position: absolute;
+    content: "";
+  }
+  &:hover {
+    background: $light__red;
+    color: $white-item;
+  }
+}
+.scroll_toTop {
+  bottom: 5% !important;
+  transition: all 1s linear;
 }

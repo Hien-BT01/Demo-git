@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var courses = ["Javascript", "Php", "Ruby"];
+      Array.prototype.forEach2 = function (callBack) {
+        var arrLength = this.length;
+        for (var i = 0; i < arrLength; i++) {
+          callBack(this[i], i);
+        }
+      };
+
+      Array.prototype.every2 = function (callBack) {
+        var arrLength = this.length;
+        for (var i = 0; i < arrLength; i++) {
+          if (!callBack(this[i])) {
+            return false;
+          }
+        }
+        return true;
+      };
+
+      Array.prototype.some2 = function (callBack) {
+        var arrLength = this.length;
+        for (var i = 0; i < arrLength; i++) {
+          if (callBack(this[i])) {
+            return true;
+          }
+        }
+        return false;
+      };
+
+      Array.prototype.find2 = function (callBack) {
+        var arrLength = this.length;
+        for (var i = 0; i < arrLength; i++) {
+          if (callBack(this[i])) {
+            return this[i];
+          }
+        }
+        return undefined;
+      };
+
+      Array.prototype.filter2 = function (callBack) {
+        var arrLength = this.length,
+          outPut = [];
+        for (var i = 0; i < arrLength; i++) {
+          if (callBack(this[i])) {
+            outPut.push(this[i]);
+          }
+        }
+        return outPut;
+      };
+
+      courses.forEach2(function (item) {
+        console.log(item);
+      });
+
+      var isEvery = courses.every2(function (item) {
+        return item === "Javascript";
+      });
+
+      console.log(isEvery);
+
+      var isSome = courses.some2(function (item) {
+        return item === "Javascript";
+      });
+
+      console.log(isSome);
+
+      var tFind = courses.find2(function (item) {
+        return item === "Javascript";
+      });
+
+      console.log(tFind);
+
+      var tFilter = courses.filter2(function (item) {
+        return item === "Javascript";
+      });
+
+      console.log(tFilter);
+    </script>
+  </head>
+  <body></body>
+</html>

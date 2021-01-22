@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let addTo = function (passed){
+            let add = function(inner){
+                return passed + inner
+            };
+            return add;
+        }
+        let sum = new addTo(3);
+        console.log(sum);
+        console.dir(sum)
+        console.log(sum(5))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

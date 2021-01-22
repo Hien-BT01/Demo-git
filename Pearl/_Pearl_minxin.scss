@@ -1,0 +1,73 @@
+@mixin textGradient_Pearl($color_text) {
+    background: $color_text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@mixin subMenu() {
+    background-image:linear-gradient(to right, #232526, #414345);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 8rem;
+    z-index: 2;
+    padding:3rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem 0.5rem rgba(0,0,0,0.1), 0 0 2rem 1rem rgba(0,0,0,0.2);
+    transform: scaleY(0);
+    transition: all 0.2s linear;
+    transform-origin: top;
+}
+@mixin subMenuContent($colorText) {
+    text-decoration: none;
+    color:$colorText;
+    font-size: 1.7rem;
+}
+@mixin subMenuWhiteSpace() {
+    content: '';
+    top: -6.5%;
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 3rem;
+    background: transparent;
+}
+@mixin subMenuIcon() {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-right: 1rem;
+    color: color_item(ryan);
+}   
+@mixin button-item($background){
+    outline:none;
+    border:none;
+    border-radius:5rem;
+    display: inline-block;
+    padding:1.5rem 4rem;
+    font-weight:500;
+    font-size:1.5rem;
+    background:$background;
+    color: #fefefe;
+    text-transform: capitalize;
+    background-size: 200% auto;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+@mixin blackColorCover__Pearl(){
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+}
+@mixin image__position-top-left__Pearl($top,$left){
+    top: $top;
+    left: $left;
+}
+@mixin image__position-top-right__Pearl($top,$right){
+    top: $top;
+    right:$right;
+}

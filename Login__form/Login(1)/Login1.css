@@ -133,7 +133,6 @@ body {
 .container .box-form .form form .Remember-box label::after {
   content: "✔";
   position: absolute;
-  content: "✔";
   position: absolute;
   top: -1px;
   left: -21px;

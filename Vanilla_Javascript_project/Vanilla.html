@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla</title>
+    <link rel="stylesheet" href="Vanilla.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <header>
+        <h2>Dark's Todo List</h2>
+    </header>
+    <form >
+        <div class="add-item">
+            <input type="text" name="" id="" class="todo-input" onfocus="this.value= ''">
+            <button class="todo-button" type="submit">
+                <i class="fas fa-plus-square"></i>
+            </button>
+        </div>
+        <div class="selections">
+            <select name="todos" class="filter-todos">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+        </div>
+    </form>
+    <div class="todo">
+        <ul class="todo__list"></ul>
+    </div>
+    <script src="Vanilla.js"></script>
+</body>
+</html>

@@ -5,6 +5,7 @@ $itemList.isotope({
     itemSelector: '.All',
     layoutMode: 'masonry'
 });
+console.log(buttonDesmosCustomMades);
 buttonDesmosCustomMades.forEach(tab => {
     tab.addEventListener('click',() => {
         let buttonTarget = tab.getAttribute('data-filter');

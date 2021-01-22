@@ -1,10 +1,11 @@
-@import "./Pearl_minxin.scss";
+@import "Pearl_minxin.scss";
 $color:(
     red_lightpink:background-image(-45deg,#cd2ca4,#e7174d 40%),
     ryan:#11b0ae,
     light_red:#da2c46,
     light_purple:#6680ed,
     light_orange:#e78c17
+
 );
 @function color_item($color_name){
     @return map-get($color,$color_name);

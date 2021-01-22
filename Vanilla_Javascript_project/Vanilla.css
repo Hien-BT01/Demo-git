@@ -1,0 +1,269 @@
+@charset "UTF-8";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  filter: hue-rotate(30deg);
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(120deg, #e2c35d, #d88771);
+  color: #fefefe;
+  min-height: 100vh;
+  width: 100%;
+}
+
+header {
+  font-size: 2.4rem;
+}
+
+header, form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+
+form .add-item {
+  overflow: hidden;
+  border-radius: 1.2rem;
+}
+form .add-item .todo-input, form .add-item .todo-button {
+  color: #827878;
+  padding: 0.5rem 1.5rem;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background: #fefefe;
+}
+form .add-item .todo-button {
+  margin-left: -0.5rem;
+  color: #d88771;
+  background-color: #fefefe;
+  cursor: pointer;
+  transition: all 0.4s linear;
+}
+form .add-item .todo-button:hover {
+  background-color: #d88771;
+  color: #fefefe;
+}
+form .selections {
+  border-radius: 1.2rem;
+  position: relative;
+  margin: 0 1rem;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+form .selections select {
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #d88771;
+  min-width: 15rem;
+  padding: 1rem;
+}
+form .selections::after {
+  content: "▼";
+  position: absolute;
+  background-color: #d88771;
+  top: 0;
+  right: 0;
+  padding: 1.4rem;
+  pointer-events: none;
+  transition: all 0.3s linear;
+}
+form .selections:hover::after {
+  background-color: #fefefe;
+  color: #d88771;
+}
+
+.todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo__list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo__div {
+  border-radius: 1.5rem;
+  margin: 0.5rem;
+  background-color: #fefefe;
+  color: #000;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s linear;
+}
+.todo__div.fall {
+  transform: translateY(10rem) rotateZ(30deg);
+  opacity: 0;
+}
+.todo__div.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+.todo__item {
+  flex: 1;
+  padding: 0 1.5rem;
+  color: #827878;
+}
+.todo .trash-btn, .todo .complete-btn {
+  background-color: #ff6f47;
+  color: #fefefe;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+.todo .trash-btn i, .todo .complete-btn i {
+  pointer-events: none;
+}
+.todo .complete-btn {
+  background-color: #72de4ee6;
+}
+
+/*# sourceMappingURL=Vanilla.css.map */

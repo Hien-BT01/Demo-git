@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins",sans-serif;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.5);
+}
+.btn{
+    border-radius: 20px;
+    outline: none;
+    padding: 20px 40px;
+    border:1px solid #3498db;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    position: relative;
+    overflow: hidden;
+    &:not(:last-of-type){
+        margin-right: 20px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #3498db;
+        z-index: -1;
+        transition: all 0.5s linear;
+    }
+    @for $i from 1 through 4{
+        @if($i == 1 or $i == 2){
+            &.btn-#{$i}{
+                color: #3498db;
+            }
+            &.btn-#{$i}:hover{
+                color: #fefefe;
+            }
+        }
+        @if($i == 3 or $i == 4){
+            &.btn-#{$i}{
+                color: #fefefe;
+            }
+            &.btn-#{$i}:hover{
+                color:#3498db;
+            }
+        }
+    }
+    &.btn-1:before,&.btn-3:before{
+        top: 0;
+        border-radius: 0 0 50% 50%;
+    }
+    &.btn-2:before,&.btn-4:before{
+        bottom: 0;
+        border-radius: 50% 50% 0 0;
+    }
+    &.btn-3:before,&.btn-4::before{
+        height: 200%;
+    }
+    &.btn-1:hover::before,&.btn-2:hover::before{
+        height: 200%;
+    }
+    &.btn-3:hover::before,&.btn-4:hover::before{
+        height: 0;
+    }
+}
